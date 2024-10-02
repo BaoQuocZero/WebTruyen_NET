@@ -1,3 +1,8 @@
+﻿using Microsoft.EntityFrameworkCore;
+using NewProject.Data;
+using NewProject.Repository;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//định nghĩa dbcontext
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+//định nghĩa repository
+builder.Services.AddScoped<ItacgiaRepository, TacgiaRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
