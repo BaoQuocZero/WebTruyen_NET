@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Data\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\MyDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TruyentranhRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\TruyentranhRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TacgiaRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\TacgiaRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\IRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\IRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ItacgiaRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\ItacgiaRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ITruyentranhRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\ITruyentranhRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\TruyenTranhController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\RepositoryGeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\RepositoryGeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Models\\TRUYEN_TRANH.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\TRUYEN_TRANH.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\TRUYEN_TRANH_DTOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TAC_GIA_DTOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\TAC_GIA_DTOs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TacGiaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\TacGiaController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TruyentranhRepository.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TruyentranhRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TruyentranhRepository.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TruyentranhRepository.cs",
+              "RelativeToolTip": "Repository\\TruyentranhRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T04:04:37.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TacgiaRepository.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TacgiaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\TacgiaRepository.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\TacgiaRepository.cs",
+              "RelativeToolTip": "Repository\\TacgiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:36:25.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IRepository.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\IRepository.cs",
+              "RelativeToolTip": "Repository\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:36:55.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItacgiaRepository.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ItacgiaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ItacgiaRepository.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ItacgiaRepository.cs",
+              "RelativeToolTip": "Repository\\ItacgiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:36:45.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITruyentranhRepository.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ITruyentranhRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ITruyentranhRepository.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\ITruyentranhRepository.cs",
+              "RelativeToolTip": "Repository\\ITruyentranhRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:46:52.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Data\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\MyDbContext.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Data\\MyDbContext.cs",
+              "RelativeToolTip": "Data\\MyDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:35:09.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TruyenTranhController.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TruyenTranhController.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
+              "RelativeToolTip": "Controllers\\TruyenTranhController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADAAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:30:24.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TRUYEN_TRANH.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Models\\TRUYEN_TRANH.cs",
+              "RelativeDocumentMoniker": "Models\\TRUYEN_TRANH.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Models\\TRUYEN_TRANH.cs",
+              "RelativeToolTip": "Models\\TRUYEN_TRANH.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:37:12.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TRUYEN_TRANH_DTOs.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "RelativeToolTip": "DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:53:01.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RepositoryGeneric.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\RepositoryGeneric.cs",
+              "RelativeDocumentMoniker": "Repository\\RepositoryGeneric.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Repository\\RepositoryGeneric.cs",
+              "RelativeToolTip": "Repository\\RepositoryGeneric.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:36:31.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TAC_GIA_DTOs.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TAC_GIA_DTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\TAC_GIA_DTOs.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\DTOs\\TAC_GIA_DTOs.cs",
+              "RelativeToolTip": "DTOs\\TAC_GIA_DTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:20:42.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TacGiaController.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TacGiaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TacGiaController.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\TacGiaController.cs",
+              "RelativeToolTip": "Controllers\\TacGiaController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAASwEAAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:37:25.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:51:00.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "F:\\L\u1EACP TR\u00CCNH WEB\\Nh-m-NET\\NewProject\\NewProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-03T03:30:51.745Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

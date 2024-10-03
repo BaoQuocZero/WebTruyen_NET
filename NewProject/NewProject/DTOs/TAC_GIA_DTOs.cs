@@ -6,4 +6,6 @@
         public string GIOI_TINH_TAC_GIA { get; set; }
         public string QUOC_GIA_TAC_GIA { get; set; }
     }
+
+    
 }
