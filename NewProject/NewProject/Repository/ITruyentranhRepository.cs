@@ -2,7 +2,7 @@
 
 namespace NewProject.Repository
 {
-    public interface ITruyentranhRepository : IRepository<TRUYEN_TRANh>
+    public interface ITruyentranhRepository : IRepository<TRUYEN_TRANH>
     {
 
     }

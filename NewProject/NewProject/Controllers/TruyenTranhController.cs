@@ -31,6 +31,8 @@ namespace NewProject.Controllers
         public IActionResult PostTruyenTranh(TRUYEN_TRANH_DTOs truyen_tranh_DTOs)
         {
             var truyentranh = _context.TRUYEN_TRANHs.FirstOrDefault(x => x.TEN_TRUYEN == truyen_tranh_DTOs.TEN_TRUYEN);
+            
+
             if (truyentranh == null)
             {
                 var newTruyenTranh = new TRUYEN_TRANH
