@@ -1,12 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\2024\\HKII\\DOTNET\\NewProject\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Code\\WebTruyen_NET\\NewProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\newproject\\newproject\\controllers\\theloaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\theloaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\newproject\\newproject\\controllers\\tacgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\tacgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\newproject\\newproject\\repository\\itheloairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\itheloairepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\newproject\\newproject\\repository\\itacgiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\itacgiarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\newproject\\newproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Program.cs",
+              "RelativeDocumentMoniker": "NewProject\\Program.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Program.cs",
+              "RelativeToolTip": "NewProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T17:00:06.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TacGiaController.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Controllers\\TacGiaController.cs",
+              "RelativeDocumentMoniker": "NewProject\\Controllers\\TacGiaController.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Controllers\\TacGiaController.cs",
+              "RelativeToolTip": "NewProject\\Controllers\\TacGiaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T15:51:10.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TheLoaiController.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Controllers\\TheLoaiController.cs",
+              "RelativeDocumentMoniker": "NewProject\\Controllers\\TheLoaiController.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Controllers\\TheLoaiController.cs",
+              "RelativeToolTip": "NewProject\\Controllers\\TheLoaiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T15:21:24.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItacgiaRepository.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Repository\\ItacgiaRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\ItacgiaRepository.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Repository\\ItacgiaRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\ItacgiaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T17:04:41.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITheLoaiRepository.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Repository\\ITheLoaiRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\ITheLoaiRepository.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\Repository\\ITheLoaiRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\ITheLoaiRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T17:03:40.838Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

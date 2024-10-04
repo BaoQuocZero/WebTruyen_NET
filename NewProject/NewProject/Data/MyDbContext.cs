@@ -41,9 +41,5 @@ namespace NewProject.Data
                 .WithMany(tt => tt.THE_LOAIs)
                 .HasForeignKey(tl => tl.MA_TRUYEN);
         }
-
-
-
-
     }
 }
