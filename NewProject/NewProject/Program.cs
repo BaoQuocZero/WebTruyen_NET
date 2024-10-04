@@ -21,6 +21,7 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 //định nghĩa repository
 builder.Services.AddScoped<ItacgiaRepository, TacgiaRepository>();
 builder.Services.AddScoped<ITruyentranhRepository, TruyentranhRepository>();
+builder.Services.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

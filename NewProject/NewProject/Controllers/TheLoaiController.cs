@@ -24,7 +24,20 @@ namespace NewProject.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllTheLoai()
         {
-            return Ok(await _ITheLoaiRepository.GetAll());
+            var product_info = _context.THE_LOAIs
+                    .Include(p => p.TRUYEN_TRANHs)
+                    .Select(p => new
+                    {
+                        ID = p.MA_THE_LOAI,
+                        TEN_THE_LOAI = p.TEN_THE_LOAI,
+                        CHO_GIOI_TINH = p.CHO_GIOI_TINH,
+                        TEN_TRUYEN = p.TRUYEN_TRANHs.TEN_TRUYEN,
+                        ANH_BIA = p.TRUYEN_TRANHs.ANH_BIA,
+                        NOIDUNGTRUYEN = p.TRUYEN_TRANHs.NOI_DUNG_TRUYEN
+                    });
+
+            return Ok(product_info);
+            //return Ok(await _ITheLoaiRepository.GetAll());
         }
 
         [HttpGet("id")]
@@ -49,7 +62,8 @@ namespace NewProject.Controllers
                 var newTheLoai = new THE_LOAI
                 {
                     TEN_THE_LOAI = _THE_LOAI_DTOs.TEN_THE_LOAI,
-                    CHO_GIOI_TINH = _THE_LOAI_DTOs.CHO_GIOI_TINH
+                    CHO_GIOI_TINH = _THE_LOAI_DTOs.CHO_GIOI_TINH,
+                    MA_TRUYEN = _THE_LOAI_DTOs.MA_TRUYEN
                 };
                 _ITheLoaiRepository.AddNew(newTheLoai);
                 return Ok("The loai moi la " + newTheLoai);
@@ -67,7 +81,8 @@ namespace NewProject.Controllers
             }
 
             TheLoai.TEN_THE_LOAI = tHE_LOAI_DTOs.TEN_THE_LOAI;
-
+            TheLoai.CHO_GIOI_TINH = tHE_LOAI_DTOs.CHO_GIOI_TINH;
+            TheLoai.MA_TRUYEN = tHE_LOAI_DTOs.MA_TRUYEN;
             _ITheLoaiRepository.UpdateWithId(TheLoai);
 
             return Ok("đã thay đổi thành công");
