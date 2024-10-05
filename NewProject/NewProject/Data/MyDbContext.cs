@@ -35,11 +35,14 @@ namespace NewProject.Data
                 .WithMany(tt => tt.SANG_TACs)
                 .HasForeignKey(st => st.MA_TRUYEN);
 
-            // Thiết lập mối quan hệ giữa THE_LOAI và TRUYEN_TRANH (N-1)
-            modelBuilder.Entity<THE_LOAI>()
-                .HasOne(tl => tl.TRUYEN_TRANHs)
-                .WithMany(tt => tt.THE_LOAIs)
-                .HasForeignKey(tl => tl.MA_TRUYEN);
+            // Thiết lập mối quan hệ giữa THE_LOAI và TRUYEN_TRANH (N-1) X sai
+            // Cấu hình bảng THE_LOAI
+            modelBuilder.Entity<THE_LOAI>(entity =>
+            {
+                entity.HasKey(e => e.MA_THE_LOAI);
+                entity.Property(e => e.TEN_THE_LOAI).HasMaxLength(255).IsRequired();
+                entity.Property(e => e.CHO_GIOI_TINH).HasMaxLength(50);
+            });
         }
     }
 }
