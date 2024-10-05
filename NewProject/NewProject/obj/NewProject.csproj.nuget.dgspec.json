@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Desktop\\Nh-m-NET\\NewProject\\NewProject\\NewProject.csproj": {}
+    "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\NewProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Desktop\\Nh-m-NET\\NewProject\\NewProject\\NewProject.csproj": {
+    "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\NewProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\NewProject\\NewProject\\NewProject.csproj",
+        "projectUniqueName": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\NewProject.csproj",
         "projectName": "NewProject",
-        "projectPath": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\NewProject\\NewProject\\NewProject.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\NewProject\\NewProject\\obj\\",
+        "projectPath": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\NewProject.csproj",
+        "packagesPath": "C:\\Users\\admiin\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\WebTruyen_NET\\NewProject\\NewProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admiin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -83,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
