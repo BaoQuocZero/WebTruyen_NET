@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Models/Thuoc.cs
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NewProject.Models
 {
@@ -7,11 +9,10 @@ namespace NewProject.Models
         public int MA_TRUYEN { get; set; }
         public int MA_THE_LOAI { get; set; }
 
-        [Required]
+        [ForeignKey("MA_TRUYEN")]
         public TRUYEN_TRANH TRUYEN_TRANH { get; set; }
-        [Required]
-        public THE_LOAI THE_LOAI { get; set; }
 
-      
+        [ForeignKey("MA_THE_LOAI")]
+        public THE_LOAI THE_LOAI { get; set; }
     }
 }

@@ -158,6 +158,130 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NewProject.Controllers.ThuocController",
+    "Method": "GetThuoc",
+    "RelativePath": "api/Thuoc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NewProject.DTOs.ThuocReadDTO, NewProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NewProject.Controllers.ThuocController",
+    "Method": "CreateThuoc",
+    "RelativePath": "api/Thuoc",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "thuocCreateDTO",
+        "Type": "NewProject.DTOs.ThuocCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NewProject.DTOs.ThuocReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NewProject.Controllers.ThuocController",
+    "Method": "GetThuoc",
+    "RelativePath": "api/Thuoc/{maTruyen}/{maTheLoai}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maTruyen",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "maTheLoai",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NewProject.DTOs.ThuocReadDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NewProject.Controllers.ThuocController",
+    "Method": "UpdateThuoc",
+    "RelativePath": "api/Thuoc/{maTruyen}/{maTheLoai}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maTruyen",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "maTheLoai",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "thuocUpdateDTO",
+        "Type": "NewProject.DTOs.ThuocUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NewProject.Controllers.ThuocController",
+    "Method": "DeleteThuoc",
+    "RelativePath": "api/Thuoc/{maTruyen}/{maTheLoai}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "maTruyen",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "maTheLoai",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NewProject.Controllers.TruyenTranhController",
     "Method": "getAllTruyenTranh",
     "RelativePath": "api/TruyenTranh",
