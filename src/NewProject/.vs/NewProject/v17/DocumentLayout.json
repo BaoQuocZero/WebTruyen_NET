@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\controllers\\truyentranhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\truyentranhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\newproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\newproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\controllers\\truyentranhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\truyentranhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\repositorygeneric.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\truyentranhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\truyentranhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\models\\thuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,29 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\users\\pc\\desktop\\nh-m-net\\src\\newproject\\newproject\\repository\\itruyentranhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\itruyentranhrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< HEAD
-=======
-=======
-  "WorkspaceRootPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\",
-  "Documents": [
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\controllers\\thuoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\thuoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
->>>>>>> eec55df37dc8eda92afa1625326adee629f827af
->>>>>>> 405b27948618d1f1e1b26c80d795310b0b21465f
->>>>>>> e51777b5b1ba6828079313014c0eb92f12f73444
     }
   ],
   "DocumentGroupContainers": [
@@ -141,43 +118,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TAC_GIA.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\TAC_GIA.cs",
-              "RelativeDocumentMoniker": "NewProject\\Models\\TAC_GIA.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\TAC_GIA.cs",
-              "RelativeToolTip": "NewProject\\Models\\TAC_GIA.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:15:03.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TRUYEN_TRANH_DTOs.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
-              "RelativeDocumentMoniker": "NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
-              "RelativeToolTip": "NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T11:17:39.154Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "SANG_TAC.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\SANG_TAC.cs",
-              "RelativeDocumentMoniker": "NewProject\\Models\\SANG_TAC.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\SANG_TAC.cs",
-              "RelativeToolTip": "NewProject\\Models\\SANG_TAC.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:15:12.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\IRepository.cs",
               "RelativeDocumentMoniker": "NewProject\\Repository\\IRepository.cs",
@@ -189,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "NewProject.http",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.http",
               "RelativeDocumentMoniker": "NewProject\\NewProject.http",
@@ -197,8 +138,7 @@
               "RelativeToolTip": "NewProject\\NewProject.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-10-06T07:00:23.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T07:00:23.56Z"
             },
             {
               "$type": "Document",
@@ -214,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Program.cs",
               "RelativeDocumentMoniker": "NewProject\\Program.cs",
@@ -222,12 +162,11 @@
               "RelativeToolTip": "NewProject\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:17:04.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T00:17:04.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "TheLoaiController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TheLoaiController.cs",
               "RelativeDocumentMoniker": "NewProject\\Controllers\\TheLoaiController.cs",
@@ -239,20 +178,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\appsettings.json",
               "RelativeDocumentMoniker": "NewProject\\appsettings.json",
               "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\appsettings.json",
               "RelativeToolTip": "NewProject\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-06T07:00:21.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IThuocRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\IThuocRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\IThuocRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T11:27:32.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThuocRepository.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\ThuocRepository.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\ThuocRepository.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T11:27:55.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TruyenTranhController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
+              "RelativeDocumentMoniker": "NewProject\\Controllers\\TruyenTranhController.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
+              "RelativeToolTip": "NewProject\\Controllers\\TruyenTranhController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAqwB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T00:37:44.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SANG_TAC.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\SANG_TAC.cs",
+              "RelativeDocumentMoniker": "NewProject\\Models\\SANG_TAC.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\SANG_TAC.cs",
+              "RelativeToolTip": "NewProject\\Models\\SANG_TAC.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T00:15:12.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TRUYEN_TRANH_DTOs.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "RelativeDocumentMoniker": "NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "RelativeToolTip": "NewProject\\DTOs\\TRUYEN_TRANH_DTOs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T11:17:39.154Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "TAC_GIA.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\TAC_GIA.cs",
+              "RelativeDocumentMoniker": "NewProject\\Models\\TAC_GIA.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\TAC_GIA.cs",
+              "RelativeToolTip": "NewProject\\Models\\TAC_GIA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T00:15:03.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "TRUYEN_TRANH.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Models\\TRUYEN_TRANH.cs",
               "RelativeDocumentMoniker": "NewProject\\Models\\TRUYEN_TRANH.cs",
@@ -264,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TacGiaController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TacGiaController.cs",
               "RelativeDocumentMoniker": "NewProject\\Controllers\\TacGiaController.cs",
@@ -276,20 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TruyenTranhController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
-              "RelativeDocumentMoniker": "NewProject\\Controllers\\TruyenTranhController.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Controllers\\TruyenTranhController.cs",
-              "RelativeToolTip": "NewProject\\Controllers\\TruyenTranhController.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAqwIoAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:37:44.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RepositoryGeneric.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\RepositoryGeneric.cs",
               "RelativeDocumentMoniker": "NewProject\\Repository\\RepositoryGeneric.cs",
@@ -301,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "TruyentranhRepository.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\TruyentranhRepository.cs",
               "RelativeDocumentMoniker": "NewProject\\Repository\\TruyentranhRepository.cs",
@@ -334,30 +335,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-06T11:21:02.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "IThuocRepository.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
-              "RelativeDocumentMoniker": "NewProject\\Repository\\IThuocRepository.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
-              "RelativeToolTip": "NewProject\\Repository\\IThuocRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T11:27:32.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ThuocRepository.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
-              "RelativeDocumentMoniker": "NewProject\\Repository\\ThuocRepository.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
-              "RelativeToolTip": "NewProject\\Repository\\ThuocRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T11:27:55.462Z"
             },
             {
               "$type": "Document",
@@ -405,92 +382,7 @@
               "RelativeToolTip": "NewProject\\DTOs\\THE_LOAI_DTOs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
               "WhenOpened": "2024-10-05T07:53:13.924Z"
-=======
-              "WhenOpened": "2024-10-05T07:53:13.924Z",
-=======
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "ThuocController.cs",
-              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Controllers\\ThuocController.cs",
-              "RelativeDocumentMoniker": "NewProject\\Controllers\\ThuocController.cs",
-              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Controllers\\ThuocController.cs",
-              "RelativeToolTip": "NewProject\\Controllers\\ThuocController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowBAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T13:21:29.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ThuocRepository.cs",
-              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
-              "RelativeDocumentMoniker": "NewProject\\Repository\\ThuocRepository.cs",
-              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
-              "RelativeToolTip": "NewProject\\Repository\\ThuocRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T13:24:12.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IThuocRepository.cs",
-              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
-              "RelativeDocumentMoniker": "NewProject\\Repository\\IThuocRepository.cs",
-              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
-              "RelativeToolTip": "NewProject\\Repository\\IThuocRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T13:24:14.179Z",
-=======
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\appsettings.json",
-              "RelativeDocumentMoniker": "NewProject\\appsettings.json",
-              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\appsettings.json",
-              "RelativeToolTip": "NewProject\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-06T12:18:39.159Z",
->>>>>>> eec55df37dc8eda92afa1625326adee629f827af
->>>>>>> 405b27948618d1f1e1b26c80d795310b0b21465f
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "NewProject.http",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.http",
-              "RelativeDocumentMoniker": "NewProject\\NewProject.http",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.http",
-              "RelativeToolTip": "NewProject\\NewProject.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-10-06T07:00:23.56Z"
->>>>>>> e51777b5b1ba6828079313014c0eb92f12f73444
             },
             {
               "$type": "Document",

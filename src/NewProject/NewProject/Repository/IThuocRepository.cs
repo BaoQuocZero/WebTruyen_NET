@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿// Repository/ITHUOCRepository.cs
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,13 +16,5 @@ namespace NewProject.Repository
         Task<bool> ExistsAsync(int maTruyen, int maTheLoai);
     }
 }
-=======
-﻿using NewProject.Models;
 
-namespace NewProject.Repository
-{
-    public interface IThuocRepository : IRepository<THUOC>
-    {
-    }
-}
->>>>>>> 405b27948618d1f1e1b26c80d795310b0b21465f
+
