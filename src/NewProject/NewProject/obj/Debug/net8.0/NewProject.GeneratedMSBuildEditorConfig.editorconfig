@@ -17,11 +17,19 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NewProject
 build_property.RootNamespace = NewProject
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\PC\Desktop\Nh-m-NET\src\NewProject\NewProject\
+=======
+build_property.ProjectDir = c:\Code\WebTruyen_NET\src\NewProject\NewProject\
+>>>>>>> eec55df37dc8eda92afa1625326adee629f827af
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\PC\Desktop\Nh-m-NET\src\NewProject\NewProject
+=======
+build_property.MSBuildProjectDirectory = c:\Code\WebTruyen_NET\src\NewProject\NewProject
+>>>>>>> eec55df37dc8eda92afa1625326adee629f827af
 build_property._RazorSourceGeneratorDebug = 

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj",
+        "projectName": "NewProject",
+        "projectPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj",
+        "packagesPath": "C:\\Users\\admiin\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\admiin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> eec55df37dc8eda92afa1625326adee629f827af
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,7 +104,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+>>>>>>> eec55df37dc8eda92afa1625326adee629f827af
         }
       }
     }
