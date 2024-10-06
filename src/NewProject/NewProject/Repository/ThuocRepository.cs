@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 ﻿// Repository/ThuocRepository.cs
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
+=======
+﻿using NewProject.Data;
+>>>>>>> 405b27948618d1f1e1b26c80d795310b0b21465f
 using NewProject.Models;
 
 namespace NewProject.Repository
 {
+<<<<<<< HEAD
     public class ThuocRepository : IThuocRepository
     {
         private readonly MyDbContext _context;
@@ -58,6 +63,12 @@ namespace NewProject.Repository
         public async Task<bool> ExistsAsync(int maTruyen, int maTheLoai)
         {
             return await _context.THUOCs.AnyAsync(t => t.MA_TRUYEN == maTruyen && t.MA_THE_LOAI == maTheLoai);
+=======
+    public class ThuocRepository : RepositoryGeneric<THUOC>, IThuocRepository
+    {
+        public ThuocRepository(MyDbContext context) : base(context)
+        {
+>>>>>>> 405b27948618d1f1e1b26c80d795310b0b21465f
         }
     }
 }

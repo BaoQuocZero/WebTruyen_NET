@@ -30,6 +30,8 @@ builder.Services.AddDbContext<MyDbContext>(options =>
 builder.Services.AddScoped<ItacgiaRepository, TacgiaRepository>();
 builder.Services.AddScoped<ITruyentranhRepository, TruyentranhRepository>();
 builder.Services.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
+builder.Services.AddScoped<ISangtacRepository, SangtacRepository>();
+builder.Services.AddScoped<IThuocRepository, ThuocRepository>();
 var app = builder.Build();
 
 app.UseCors("AllowReactApp");
