@@ -27,7 +27,7 @@ namespace NewProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostTacGia(TAC_GIA_DTOs tAC_GIA_DTOs) 
+        public async Task<IActionResult> PostTacGia(TAC_GIA_DTOs tAC_GIA_DTOs) 
         {
             var tacgia = _context.TAC_GIAs.FirstOrDefault(x => x.TEN_TAC_GIA == tAC_GIA_DTOs.TEN_TAC_GIA);
             if (tacgia == null)
@@ -39,8 +39,8 @@ namespace NewProject.Controllers
                     GIOI_TINH_TAC_GIA = tAC_GIA_DTOs.GIOI_TINH_TAC_GIA,
                     QUOC_GIA_TAC_GIA = tAC_GIA_DTOs.QUOC_GIA_TAC_GIA
                 };
-                _itacgiaRepository.AddNew(newTacgia);
-                return Ok("tac gia moi la "+ newTacgia);
+               await  _itacgiaRepository.AddNew(newTacgia);
+                return Ok("tac gia moi la "+ newTacgia.TEN_TAC_GIA);
             }
             return BadRequest("tac gia nay da ton tai");
         }

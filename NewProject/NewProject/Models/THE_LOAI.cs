@@ -10,5 +10,7 @@ namespace NewProject.Models
         [Required]
         public string TEN_THE_LOAI {  set; get; }
         public string CHO_GIOI_TINH {  set; get; }
+
+        public ICollection<THUOC> THUOCs { get; set; }
     }
 }
