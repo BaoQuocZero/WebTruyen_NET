@@ -7,6 +7,9 @@
 /* DROP EXISTING TABLES                                         */
 /*==============================================================*/
 
+CREATE DATABASE QUANLY_SACH
+USE QUANLY_SACH
+
 /* Drop bảng phụ thuộc trước để tránh lỗi khi DROP */
 DROP TABLE IF EXISTS SANG_TAC;
 DROP TABLE IF EXISTS THUOC;
@@ -25,6 +28,9 @@ CREATE TABLE TAC_GIA
     QUOC_GIA_TAC_GIA     VARCHAR(255)
 );
 
+INSERT INTO TAC_GIA (MA_TAC_GIA, TEN_TAC_GIA, GIOI_TINH_TAC_GIA, QUOC_GIA_TAC_GIA)
+VALUES (1, 'Nhân', 'Nam', 'Việt Nam');
+
 /*==============================================================*/
 /* TABLE: TRUYEN_TRANH                                          */
 /*==============================================================*/
@@ -38,6 +44,9 @@ CREATE TABLE TRUYEN_TRANH
     MO_TA_TRUYEN         VARCHAR(5000),
     GHI_CHU_TRUYEN       VARCHAR(5000)
 );
+
+INSERT INTO TRUYEN_TRANH (MA_TRUYEN, TEN_TRUYEN, ANH_BIA, NOI_DUNG_TRUYEN ,TINH_TRANG, MO_TA_TRUYEN, GHI_CHU_TRUYEN)
+VALUES (1, 'ABC', '', 'Comment', 'Còn', 'Truyện sách', 'Tiểu thuyết');
 
 /*==============================================================*/
 /* TABLE: THE_LOAI                                              */
