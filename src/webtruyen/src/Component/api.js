@@ -1,14 +1,12 @@
 // src/api.js
 
-import axios from 'axios';
+import axios from "axios";
 
 const getAllArist = () => {
-    return axios.get("https://localhost:7003/api/TacGia");
-}
+  return axios.get("https://localhost:7003/api/TacGia");
+};
 
-export {
-    getAllArist
-}
+export { getAllArist };
 
 // Hàm thêm tác giả
 // export const addTacGia = async (tacGia) => {

@@ -6,22 +6,17 @@ using System;
 var builder = WebApplication.CreateBuilder(args);
 
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 
 
 
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
-                      {
-                          policy.WithOrigins("http://localhost:3000/")
-                                .AllowAnyHeader()
-                                .AllowAnyMethod();
-                               
-
-                      });
+    options.AddPolicy("AllowReactApp",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
 });
 
 // Add services to the container.
@@ -43,7 +38,7 @@ builder.Services.AddScoped<ITruyentranhRepository, TruyentranhRepository>();
 builder.Services.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
 var app = builder.Build();
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors("AllowReactApp");
 
 
 
