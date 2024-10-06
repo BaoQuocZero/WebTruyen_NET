@@ -8,14 +8,25 @@ namespace NewProject.Models
         public int MA_TRUYEN { get; set; }
 
         [Required]
+        [StringLength(5000)]
         public string TEN_TRUYEN { get; set; }
-        public string ANH_BIA  { get; set; }
+
+        [StringLength(5000)]
+        public string ANH_BIA { get; set; }
+
+        [StringLength(5000)]
         public string NOI_DUNG_TRUYEN { get; set; }
 
-        public string TINH_TRANG {  get; set; }
+        [StringLength(50)]
+        public string TINH_TRANG { get; set; }
+
+        [StringLength(5000)]
         public string MO_TA_TRUYEN { get; set; }
+
+        [StringLength(5000)]
         public string GHI_CHU_TRUYEN { get; set; }
-        //public ICollection<THE_LOAI> THE_LOAIs { get; set; }
+
+        // Navigation Properties
         public ICollection<SANG_TAC> SANG_TACs { get; set; }
         public ICollection<THUOC> THUOCs { get; set; }
     }

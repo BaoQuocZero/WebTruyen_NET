@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\controllers\\thuoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\controllers\\thuoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\thuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|c:\\code\\webtruyen_net\\src\\newproject\\newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{245FDE03-A2AD-4273-AF56-D7257FB1C952}|NewProject\\NewProject.csproj|solutionrelative:newproject\\repository\\ithuocrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +43,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\appsettings.json",
-              "RelativeDocumentMoniker": "NewProject\\appsettings.json",
-              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\appsettings.json",
-              "RelativeToolTip": "NewProject\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-06T12:18:39.159Z",
+              "Title": "ThuocController.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Controllers\\ThuocController.cs",
+              "RelativeDocumentMoniker": "NewProject\\Controllers\\ThuocController.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Controllers\\ThuocController.cs",
+              "RelativeToolTip": "NewProject\\Controllers\\ThuocController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowBAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T13:21:29.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThuocRepository.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\ThuocRepository.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\ThuocRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\ThuocRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T13:24:12.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IThuocRepository.cs",
+              "DocumentMoniker": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
+              "RelativeDocumentMoniker": "NewProject\\Repository\\IThuocRepository.cs",
+              "ToolTip": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\Repository\\IThuocRepository.cs",
+              "RelativeToolTip": "NewProject\\Repository\\IThuocRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T13:24:14.179Z",
               "EditorCaption": ""
             }
           ]

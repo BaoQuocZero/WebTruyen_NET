@@ -37,15 +37,15 @@ namespace NewProject.Data
                 .WithMany(tt => tt.SANG_TACs)
                 .HasForeignKey(st => st.MA_TRUYEN);
 
+            // Thiết lập mối quan hệ giữa SANG_TAC và TRUYEN_TRANH (N-1)
+            modelBuilder.Entity<THUOC>()
+                .HasOne(st => st.TRUYEN_TRANH)
+                .WithMany(tt => tt.THUOCs)
+                .HasForeignKey(st => st.MA_TRUYEN);
 
+            //===============================================================================================
+            //Không biết khúc trên có đúng không ??
 
-
-
-
-
-
-
-            // Thiết lập mối quan hệ giữa THE_LOAI và TRUYEN_TRANH (N-1) X sai
             // Cấu hình bảng THE_LOAI
             modelBuilder.Entity<THE_LOAI>(entity =>
             {
@@ -54,28 +54,23 @@ namespace NewProject.Data
                 entity.Property(e => e.CHO_GIOI_TINH).HasMaxLength(50);
             });
 
+            // Định nghĩa khóa chính hợp nhất cho Thuoc
             modelBuilder.Entity<THUOC>()
-                .HasKey(st => new { st.MA_THE_LOAI, st.MA_TRUYEN });
+                .HasKey(t => new { t.MA_TRUYEN, t.MA_THE_LOAI });
 
-            // Thiết lập mối quan hệ giữa SANG_TAC và TAC_GIA (N-1)
+            // Cấu hình mối quan hệ giữa THUOC và TRUYEN_TRANH
             modelBuilder.Entity<THUOC>()
-                .HasOne(st => st.THE_LOAI)
-                .WithMany(tg => tg.THUOCs)
-                .HasForeignKey(st => st.MA_THE_LOAI);
-
-            // Thiết lập mối quan hệ giữa SANG_TAC và TRUYEN_TRANH (N-1)
-            modelBuilder.Entity<THUOC>()
-                .HasOne(st => st.TRUYEN_TRANH)
+                .HasOne(th => th.TRUYEN_TRANH)
                 .WithMany(tt => tt.THUOCs)
-                .HasForeignKey(st => st.MA_TRUYEN);
+                .HasForeignKey(th => th.MA_TRUYEN)
+                .OnDelete(DeleteBehavior.NoAction);
 
-
-
-
-
-
-
-
+            // Cấu hình mối quan hệ giữa THUOC và THE_LOAI
+            modelBuilder.Entity<THUOC>()
+                .HasOne(th => th.THE_LOAI)
+                .WithMany(tl => tl.THUOCs)
+                .HasForeignKey(th => th.MA_THE_LOAI)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

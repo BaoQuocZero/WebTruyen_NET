@@ -5,12 +5,6 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
-
-
-
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -40,15 +34,12 @@ var app = builder.Build();
 
 app.UseCors("AllowReactApp");
 
-
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseHttpsRedirection();
 
