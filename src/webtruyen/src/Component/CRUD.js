@@ -74,7 +74,19 @@ const postNewGenres = (tentheloai, gioitinh) => {
   console.log("check data: ", newData[0]);
 
   return axios.post("https://localhost:7003/api/TheLoai", newData[0]);
-}
+};
+
+const updateGenreById = async (id, updatedGenre) => {
+  try {
+    // Đảm bảo ID đúng kiểu và URL chính xác
+    console.log("id", updatedGenre);
+    const response = await axios.put(`https://localhost:7003/api/TheLoai/id?id=${id}`, updatedGenre);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating author:", error);
+    throw error;
+  }
+};
 
 export {
   getAllArist,
@@ -83,6 +95,7 @@ export {
   getAllGenres,
   postNewGenres,
   updateAuthorById,
+  updateGenreById,
 };
 
 //Hàm thêm tác giả

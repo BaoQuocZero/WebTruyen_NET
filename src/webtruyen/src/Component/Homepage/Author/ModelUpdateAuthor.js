@@ -5,17 +5,12 @@ import { toast } from 'react-toastify';
 import { updateAuthorById } from '../../CRUD';
 
 const ModelUpdateAuthor = (props) => {
-    const { showUpdate, setShowUpdate, selectedAuthorId } = props; // Nhận thêm prop `authorId`
+
+    const { showUpdate, setShowUpdate, selectedAuthorId, fetchListArtist } = props; // Nhận thêm prop `authorId`
 
     const [tentacgia, setNewTenTacGia] = useState("");
     const [gioitinh, setNewGioiTinh] = useState("Nam");
     const [quocgia, setNewQuocGia] = useState("");
-
-    const showValueUpdate = () => {
-        setNewTenTacGia(selectedAuthorId.mA_TAC_GIA);
-        setNewGioiTinh(selectedAuthorId.gioI_TINH_TAC_GIA);
-        setNewQuocGia(selectedAuthorId.quoC_GIA_TAC_GIA);
-    }
 
     const handleClose = () => {
         setShowUpdate(false);
@@ -32,6 +27,7 @@ const ModelUpdateAuthor = (props) => {
             setNewQuocGia(selectedAuthorId.quoC_GIA_TAC_GIA);
         }
     }, [selectedAuthorId])
+
     const handleSubmitUpdateAuthor = async () => {
         try {
             const updatedAuthor = {
@@ -49,7 +45,8 @@ const ModelUpdateAuthor = (props) => {
             let data = await updateAuthorById(selectedAuthorId.mA_TAC_GIA, updatedAuthor);
             console.log("Update response:", data);
             handleClose();
-            toast.success("Update succeed!!!");
+            fetchListArtist();
+
         } catch (error) {
             toast.error("Update failed! Check the console for more details.");
             console.error("Update error:", error);

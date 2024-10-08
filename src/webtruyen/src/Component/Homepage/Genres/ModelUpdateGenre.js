@@ -1,14 +1,17 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { toast } from 'react-toastify';
-import { updateAuthorById } from '../../CRUD';
+import { updateGenreById } from '../../CRUD';
 
 const ModelUpdateGenres = (props) => {
 
-    const { showUpdate, setShowUpdate } = props;
+    const { showUpdate, setShowUpdate, selectedGenreId, fetchListGenre } = props;
+
+    const [tentheloai, setNewTheLoai] = useState("");
+    const [gioitinhtheloai, setNewGioiTinh] = useState("Nam");
 
     const handleClose = () => {
         setShowUpdate(false);
@@ -16,17 +19,38 @@ const ModelUpdateGenres = (props) => {
         setNewGioiTinh("Nam");
     };
 
-    const [tentacgia, setNewTheLoai] = useState("");
-    const [gioitinh, setNewGioiTinh] = useState("Nam");
+    useEffect(() => {
+        if (selectedGenreId) {
+            setNewTheLoai(selectedGenreId.teN_THE_LOAI);
+            setNewGioiTinh(selectedGenreId.chO_GIOI_TINH);
+        }
+    }, [selectedGenreId])
 
-    const handleSubmitUpdateAuthor = async () => {
+    const handleSubmitUpdateGenres = async () => {
+        try {
+            const updatedGenre = {
+                teN_THE_LOAI: tentheloai,
+                chO_GIOI_TINH: gioitinhtheloai,
+            };
 
-        let data = await updateAuthorById(tentacgia, gioitinh)
-        console.log("Component res = ", data)
-        toast.success("Update succeed!!!");
-        handleClose();
-        window.location.reload();
+            console.log("Author ID to update:", selectedGenreId.mA_THE_LOAI);
+            if (!selectedGenreId) {
+                toast.error("Author ID is missing or invalid!");
+                return;
+            }
+
+            let data = await updateGenreById(selectedGenreId.mA_THE_LOAI, updatedGenre);
+            console.log("Update response:", data);
+            handleClose();
+            fetchListGenre();
+
+        } catch (error) {
+            toast.error("Update failed! Check the console for more details.");
+            console.error("Update error:", error);
+        }
     };
+    console.log("check", selectedGenreId);
+    // showValueUpdate(); 
 
     return (
         <>
@@ -45,16 +69,20 @@ const ModelUpdateGenres = (props) => {
                             <input
                                 type="text"
                                 className="form-control"
-                                value={tentacgia}
+                                value={tentheloai}
                                 onChange={(event) => setNewTheLoai(event.target.value)}
                             />
                         </div>
                         <div className="col-md-4">
                             <label className="form-label">GIỚI TÍNH MỚI</label>
-                            <select className="form-select" onChange={(event) => setNewGioiTinh(event.target.value)}>
-                                <option value="nam">NAM</option>
-                                <option value="nu">NỮ</option>
-                                <option value="khac">KHÁC</option>
+                            <select
+                                className="form-select"
+                                onChange={(event) => setNewGioiTinh(event.target.value)}
+                                value={gioitinhtheloai}
+                            >
+                                <option value="Nam">NAM</option>
+                                <option value="Nữ">NỮ</option>
+                                <option value="Khác">KHÁC</option>
                             </select>
                         </div>
                     </form>
@@ -63,7 +91,7 @@ const ModelUpdateGenres = (props) => {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={() => handleSubmitUpdateAuthor()}>
+                    <Button variant="primary" onClick={() => handleSubmitUpdateGenres()}>
                         Save
                     </Button>
                 </Modal.Footer>

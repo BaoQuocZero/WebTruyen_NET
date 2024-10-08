@@ -26,7 +26,7 @@ const ModelCreateGenres = (props) => {
         console.log("Component res = ", data)
         toast.success("Thêm thành công");
         handleCloseGenre();
-        fetchListGenre()
+        fetchListGenre();
     };
 
     return (
@@ -53,9 +53,9 @@ const ModelCreateGenres = (props) => {
                         <div className="col-md-4">
                             <label className="form-label">CHO GIỚI TÍNH</label>
                             <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
-                                <option value="nam">NAM</option>
-                                <option value="nu">NỮ</option>
-                                <option value="khac">KHÁC</option>
+                                <option value="Nam">NAM</option>
+                                <option value="Nữ">NỮ</option>
+                                <option value="Khác">KHÁC</option>
                             </select>
                         </div>
                     </form>

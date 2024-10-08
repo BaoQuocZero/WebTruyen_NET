@@ -10,8 +10,7 @@ import Comic from './Component/Homepage/Comic/Comic';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './Component/Homepage/Homepage';
 import Genre from './Component/Homepage/Genres/Genre';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,7 +24,6 @@ root.render(
       <Route path="/genre" element={<Genre />}>
       </Route>
     </Routes>
-    <ToastContainer />
   </BrowserRouter>
 );
 

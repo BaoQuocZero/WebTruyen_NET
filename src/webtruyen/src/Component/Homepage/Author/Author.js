@@ -80,6 +80,7 @@ const Author = (props) => {
                       showUpdate={showModalUpdateAuthor}
                       setShowUpdate={setShowModalUpdateAuthor}
                       selectedAuthorId={TacGia} // Truyền ID vào modal
+                      fetchListArtist={fetchListArtist}
                     />
                     <button className="btn btn-danger">Delete</button>
                   </td>

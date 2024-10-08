@@ -25,7 +25,6 @@ const ModelCreateAuthor = (props) => {
 
         let data = await postNewArtist(tentacgia, gioitinh, quocgia)
         console.log("Component res = ", data)
-        toast.success("Thêm thành công");
         handleClose();
         await props.fetchListArtist()
     };

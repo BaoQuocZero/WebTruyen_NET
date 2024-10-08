@@ -12,6 +12,23 @@ const Genre = (props) => {
     const [showModalCreateGenres, setShowModalCreateGenres] = useState(false);
     const [showModalUpdateGenres, setShowModalUpdateGenres] = useState(false);
 
+    const [TheLoai, setTheLoai] = useState(
+        {
+            mA_THE_LOAI: '',
+            teN_THE_LOAI: '',
+            chO_GIOI_TINH: '',
+            thuoCs: '',
+        }
+    );
+
+    const handleClickUpdate = (item) => {
+        setTheLoai({
+            mA_THE_LOAI: item.mA_THE_LOAI,
+            teN_THE_LOAI: item.teN_THE_LOAI,
+            chO_GIOI_TINH: item.chO_GIOI_TINH,
+            thuoCs: item.thuoCs,
+        });
+    }
 
     const [listGenres, setListGenres] = useState([]);
 
@@ -31,7 +48,10 @@ const Genre = (props) => {
             <Nav />
             <div className='genres-container'>
                 <div className='btn btn-primary'>
-                    <button className="btn btn-primary " onClick={() => setShowModalCreateGenres(true)}>
+                    <button className="btn btn-primary "
+                        onClick={() =>
+                            setShowModalCreateGenres(true)
+                        }>
                         <FaRegPlusSquare /> Add new Genres
                     </button>
                 </div>
@@ -44,6 +64,7 @@ const Genre = (props) => {
                     <table className="table table-hover table-bordered">
                         <thead>
                             <tr>
+                                <td scope="col">Mã thể loại</td>
                                 <td scope="col">Tên thể loại</td>
                                 <td scope="col">Cho giới tính</td>
                                 <td scope="col">Thuộc</td>
@@ -56,16 +77,23 @@ const Genre = (props) => {
                                 listGenres.map((item, index) => {
                                     return (
                                         <tr key={`table-user-${index}`}>
+                                            <td>{item.mA_THE_LOAI}</td>
                                             <td>{item.teN_THE_LOAI}</td>
                                             <td>{item.chO_GIOI_TINH}</td>
                                             <td>{item.thuoCs}</td>
                                             <td>
-                                                <button className="btn btn-warning mx-3" onClick={() => setShowModalUpdateGenres(true)}>
+                                                <button className="btn btn-warning mx-3"
+                                                    onClick={() => {
+                                                        handleClickUpdate(item);
+                                                        setShowModalUpdateGenres(true)
+                                                    }}>
                                                     Update
                                                 </button>
                                                 <ModelUpdateGenres
                                                     showUpdate={showModalUpdateGenres}
                                                     setShowUpdate={setShowModalUpdateGenres}
+                                                    selectedGenreId={TheLoai}
+                                                    fetchListGenre={fetchListGenre}
                                                 />
                                                 <button className="btn btn-danger">Delete</button>
                                             </td>
@@ -82,7 +110,7 @@ const Genre = (props) => {
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </div >
         </>
     );
 };
