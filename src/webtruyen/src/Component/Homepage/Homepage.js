@@ -1,7 +1,7 @@
 import { getAllArist } from "../CRUD";
-import TacGiaComponent from "./tacgia";
 import { useState, useEffect } from "react";
 import './Style.css';
+import Author from "./Author/Author";
 
 const Homepage = (props) => {
     const [listArtist, setListArtist] = useState([]);
@@ -17,9 +17,14 @@ const Homepage = (props) => {
         setListArtist(res.data);
     };
     return (
-        <div className="tacgia_container">
-            <TacGiaComponent listArtist={listArtist} />
-        </div>
+        <>
+            <div>
+                <Author
+                    listArtist={listArtist}
+                    fetchListArtist={fetchListArtist}
+                />
+            </div>
+        </>
     )
 }
 export default Homepage;
