@@ -140,19 +140,38 @@ namespace NewProject.Controllers
             truyentranh.TINH_TRANG = truyentranhDTOs.TINH_TRANG;
             truyentranh.MO_TA_TRUYEN = truyentranhDTOs.MO_TA_TRUYEN;
             truyentranh.GHI_CHU_TRUYEN = truyentranhDTOs.GHI_CHU_TRUYEN;
-            //var sangtac = await _context.SANG_TACs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id);
-            //if (sangtac.MA_TAC_GIA != truyentranhDTOs.MA_TAC_GIA)
-            //{
-            //    sangtac.MA_TAC_GIA = truyentranhDTOs.MA_TAC_GIA; // Cập nhật MA_TAC_GIA
-            //    _sangtacRepository.UpdateWithId(sangtac);
-            //}
+            var sangtac = await _context.SANG_TACs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id && x.MA_TAC_GIA == truyentranhDTOs.OLD_MA_TAC_GIA);
+            if (sangtac != null && sangtac.MA_TAC_GIA != truyentranhDTOs.MA_TAC_GIA)
+            {
+                // Xóa thực thể hiện tại
+                _context.SANG_TACs.Remove(sangtac);
+                await _context.SaveChangesAsync();
 
-            //var thuoc = await _context.THUOCs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id);
-            //if (thuoc.MA_THE_LOAI != truyentranhDTOs.MA_THE_LOAI)
-            //{
-            //    thuoc.MA_THE_LOAI = truyentranhDTOs.MA_THE_LOAI; // Cập nhật MA_THE_LOAI
-            //    _thuocRepository.UpdateWithId(thuoc);
-            //}
+                // Tạo một thực thể mới với MA_TAC_GIA mới
+                var newSangTac = new SANG_TAC
+                {
+                    MA_TRUYEN = id,
+                    MA_TAC_GIA = truyentranhDTOs.MA_TAC_GIA
+                    // Cần gán các thuộc tính khác nếu có
+                };
+                await _context.SANG_TACs.AddAsync(newSangTac);
+            }
+
+            var thuoc = await _context.THUOCs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id && x.MA_THE_LOAI == truyentranhDTOs.OLD_MA_THE_LOAI);
+            if (thuoc != null && thuoc.MA_THE_LOAI != truyentranhDTOs.MA_THE_LOAI)
+            {
+                _context.THUOCs.Remove(thuoc);
+                await _context.SaveChangesAsync();
+
+                // Tạo một thực thể mới với MA_TAC_GIA mới
+                var newThuoc = new THUOC
+                {
+                    MA_TRUYEN = id,
+                    MA_THE_LOAI = truyentranhDTOs.MA_THE_LOAI
+                    // Cần gán các thuộc tính khác nếu có
+                };
+                await _context.THUOCs.AddAsync(newThuoc);
+            }
 
 
 

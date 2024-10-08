@@ -9,59 +9,44 @@ using NewProject.Models;
 namespace NewProject.Repository
 {
 
-    public class ThuocRepository : IThuocRepository
+    public class ThuocRepository : RepositoryGeneric<THUOC>,IThuocRepository
     {
         private readonly MyDbContext _context;
 
-        public ThuocRepository(MyDbContext context)
+        public ThuocRepository(MyDbContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<THUOC>> GetAllAsync()
+       
+        public Task<THUOC> AddAsync(THUOC THUOC)
         {
-            return await _context.THUOCs
-                .Include(t => t.TRUYEN_TRANH)
-                .Include(t => t.THE_LOAI)
-                .ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<THUOC> GetByIdAsync(int maTruyen, int maTheLoai)
+        public Task DeleteAsync(int maTruyen, int maTheLoai)
         {
-            return await _context.THUOCs
-                .Include(t => t.TRUYEN_TRANH)
-                .Include(t => t.THE_LOAI)
-                .FirstOrDefaultAsync(t => t.MA_TRUYEN == maTruyen && t.MA_THE_LOAI == maTheLoai);
+            throw new NotImplementedException();
         }
 
-        public async Task<THUOC> AddAsync(THUOC THUOC)
+        public Task<bool> ExistsAsync(int maTruyen, int maTheLoai)
         {
-            _context.THUOCs.Add(THUOC);
-            await _context.SaveChangesAsync();
-            return THUOC;
+            throw new NotImplementedException();
         }
 
-        public async Task UpdateAsync(THUOC THUOC)
+        public Task<IEnumerable<THUOC>> GetAllAsync()
         {
-            _context.Entry(THUOC).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task DeleteAsync(int maTruyen, int maTheLoai)
+        public Task<THUOC> GetByIdAsync(int maTruyen, int maTheLoai)
         {
-            var THUOC = await GetByIdAsync(maTruyen, maTheLoai);
-            if (THUOC != null)
-            {
-                _context.THUOCs.Remove(THUOC);
-                await _context.SaveChangesAsync();
-            }
+            throw new NotImplementedException();
         }
 
-        public async Task<bool> ExistsAsync(int maTruyen, int maTheLoai)
+        public Task UpdateAsync(THUOC THUOC)
         {
-            return await _context.THUOCs.AnyAsync(t => t.MA_TRUYEN == maTruyen && t.MA_THE_LOAI == maTheLoai);
-
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -8135,19 +8135,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admiin\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.csproj",
       "projectName": "NewProject",
-      "projectPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\NewProject.csproj",
-      "packagesPath": "C:\\Users\\admiin\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\WebTruyen_NET\\src\\NewProject\\NewProject\\obj\\",
+      "projectPath": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\NewProject.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\Desktop\\Nh-m-NET\\src\\NewProject\\NewProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admiin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8155,7 +8155,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8221,7 +8220,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

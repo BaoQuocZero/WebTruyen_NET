@@ -11,7 +11,8 @@ namespace NewProject.DTOs
         public string MO_TA_TRUYEN { get; set; }
         public string GHI_CHU_TRUYEN { get; set; }
 
-        
+        public int OLD_MA_THE_LOAI { get; set; }
+        public int OLD_MA_TAC_GIA  { get; set; }
         public int MA_THE_LOAI {  get; set; }
         public int MA_TAC_GIA { get; set; }
 

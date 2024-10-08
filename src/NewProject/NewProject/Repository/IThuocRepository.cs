@@ -6,7 +6,7 @@ using NewProject.Models;
 
 namespace NewProject.Repository
 {
-    public interface IThuocRepository
+    public interface IThuocRepository : IRepository<THUOC>
     {
         Task<IEnumerable<THUOC>> GetAllAsync();
         Task<THUOC> GetByIdAsync(int maTruyen, int maTheLoai);
