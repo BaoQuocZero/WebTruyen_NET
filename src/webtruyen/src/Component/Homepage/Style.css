@@ -1,0 +1,31 @@
+
+.comic-container{
+    margin-top: 10%;
+}
+
+.genres-container{
+    margin-top: 10%;
+}
+
+.navbar {
+    padding: 1rem;
+    background-color: #f8f9fa; /* Màu nền sáng */
+    border-bottom: 1px solid #dee2e6; /* Đường viền dưới */
+}
+
+.navbar a {
+    color: #007bff; /* Màu văn bản */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 0.5rem 1rem; /* Khoảng cách cho liên kết */
+    border-radius: 0.25rem; /* Bo góc */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.navbar a:hover {
+    background-color: #007bff; /* Màu nền khi hover */
+    color: #fff; /* Màu văn bản khi hover */
+}
+
+.navbar a:not(:last-child) {
+    margin-right: 1rem; /* Khoảng cách giữa các liên kết */
+}
