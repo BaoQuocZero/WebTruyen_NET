@@ -3,7 +3,6 @@ import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { getAllComic } from '../../CRUD';
-import Nav from '../../Nav/Nav';
 import '../Style.css';
 
 const Comic = (props) => {
@@ -23,7 +22,6 @@ const Comic = (props) => {
 
     return (
         <>
-            <Nav />
             <div className='comic-container'>
                 <table className="table table-hover table-bordered">
                     <thead>
@@ -47,10 +45,10 @@ const Comic = (props) => {
                                         <td>{item.teN_TRUYEN}</td>
                                         <td>{item.noI_DUNG}</td>
                                         <td>{item.tinH_TRANG}</td>
-                                        <td>{item.thE_LOAI}</td>
-                                        <td>{item.chO_GIOI_TINH}</td>
+                                        <td>{Array.isArray(item.thE_LOAI) ? item.thE_LOAI.join(', ') : item.thE_LOAI}</td>
+                                        <td>{Array.isArray(item.chO_GIOI_TINH) ? item.chO_GIOI_TINH.join(', ') : item.chO_GIOI_TINH}</td>
                                         <td>{item.taC_GIA}</td>
-                                        <td>{item.quoC_GIA_TAC_GIA}</td>
+                                        <td>{Array.isArray(item.quoC_GIA_TAC_GIA) ? item.quoC_GIA_TAC_GIA.join(', ') : item.quoC_GIA_TAC_GIA}</td>
                                         <td>
                                             <button className="btn btn-warning mx-3">Update</button>
                                             <button className="btn btn-danger">Delete</button>

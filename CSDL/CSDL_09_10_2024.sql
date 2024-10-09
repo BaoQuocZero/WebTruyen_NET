@@ -3,6 +3,9 @@
 /* Created on:     10/9/2024 9:06:37 PM                         */
 /*==============================================================*/
 
+CREATE DATABASE QUANLY_TRUYEN
+USE QUANLY_TRUYEN
+
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('SANG_TAC') and o.name = 'FK_SANG_TAC_SANG_TAC_TAC_GIA')
@@ -132,7 +135,7 @@ go
 /* Table: TAC_GIA                                               */
 /*==============================================================*/
 create table TAC_GIA (
-   MA_TAC_GIA           int                  not null,
+   MA_TAC_GIA           int  IDENTITY(1,1)    not null,
    TEN_TAC_GIA          nvarchar(255)         null,
    GIOI_TINH_TAC_GIA    nvarchar(50)          null,
    QUOC_GIA_TAC_GIA     nvarchar(255)         null,
@@ -144,7 +147,7 @@ go
 /* Table: THE_LOAI                                              */
 /*==============================================================*/
 create table THE_LOAI (
-   MA_THE_LOAI          int                  not null,
+   MA_THE_LOAI          int     IDENTITY(1,1) not null,
    TEN_THE_LOAI         nvarchar(255)         null,
    CHO_GIOI_TINH        nvarchar(50)          null,
    constraint PK_THE_LOAI primary key nonclustered (MA_THE_LOAI)
@@ -181,7 +184,7 @@ go
 /* Table: TRUYEN_TRANH                                          */
 /*==============================================================*/
 create table TRUYEN_TRANH (
-   MA_TRUYEN            int                  not null,
+   MA_TRUYEN            int   IDENTITY(1,1) not null,
    TEN_TRUYEN           nvarchar(255)         null,
    ANH_BIA              nvarchar(2000)        null,
    NOI_DUNG_TRUYEN      nvarchar(4000)        null,
@@ -215,35 +218,35 @@ go
 /*==============================================================*/
 /* Thêm dữ liệu vào bảng TAC_GIA                                 */
 /*==============================================================*/
-INSERT INTO TAC_GIA (MA_TAC_GIA, TEN_TAC_GIA, GIOI_TINH_TAC_GIA, QUOC_GIA_TAC_GIA)
+INSERT INTO TAC_GIA (TEN_TAC_GIA, GIOI_TINH_TAC_GIA, QUOC_GIA_TAC_GIA)
 VALUES 
-    (1, N'Nguyễn Văn A', N'Nam', N'Việt Nam'),
-    (2, N'Lê Thị B', N'Nữ', N'Việt Nam'),
-    (3, N'John Doe', N'Nam', N'Mỹ'),
-    (4, N'Jane Smith', N'Nữ', N'Anh');
+    (N'Nguyễn Văn A', N'Nam', N'Việt Nam'),
+    (N'Lê Thị B', N'Nữ', N'Việt Nam'),
+    (N'John Doe', N'Nam', N'Mỹ'),
+    (N'Jane Smith', N'Nữ', N'Anh');
 GO
 
 /*==============================================================*/
 /* Thêm dữ liệu vào bảng THE_LOAI                                */
 /*==============================================================*/
-INSERT INTO THE_LOAI (MA_THE_LOAI, TEN_THE_LOAI, CHO_GIOI_TINH)
+INSERT INTO THE_LOAI (TEN_THE_LOAI, CHO_GIOI_TINH)
 VALUES 
-    (1, N'Hành động', N'Tất cả'),
-    (2, N'Phiêu lưu', N'Tất cả'),
-    (3, N'Hài hước', N'Nữ'),
-    (4, N'Giả tưởng', N'Tất cả'),
-    (5, N'Lãng mạn', N'Nữ');
+    (N'Hành động', N'Tất cả'),
+    (N'Phiêu lưu', N'Tất cả'),
+    (N'Hài hước', N'Nữ'),
+    (N'Giả tưởng', N'Tất cả'),
+    (N'Lãng mạn', N'Nữ');
 GO
 
 /*==============================================================*/
 /* Thêm dữ liệu vào bảng TRUYEN_TRANH                           */
 /*==============================================================*/
-INSERT INTO TRUYEN_TRANH (MA_TRUYEN, TEN_TRUYEN, ANH_BIA, NOI_DUNG_TRUYEN, TINH_TRANG, MO_TA_TRUYEN, GHI_CHU_TRUYEN)
+INSERT INTO TRUYEN_TRANH (TEN_TRUYEN, ANH_BIA, NOI_DUNG_TRUYEN, TINH_TRANG, MO_TA_TRUYEN, GHI_CHU_TRUYEN)
 VALUES 
-    (1, N'Tiểu Thuyết 1', N'https://example.com/image1.jpg', N'Nội dung tiếng Việt có dấu.', N'Hoàn thành', N'Mô tả chi tiết về truyện 1.', N'Ghi chú bổ sung 1.'),
-    (2, N'Tiểu Thuyết 2', N'https://example.com/image2.jpg', N'Nội dung tiếng Việt có dấu và dài hơn.', N'Đang tiến hành', N'Mô tả chi tiết về truyện 2.', N'Ghi chú bổ sung 2.'),
-    (3, N'Adventure Story', N'https://example.com/image3.jpg', N'Content in English.', N'Hoàn thành', N'Detailed description of story 3.', N'Additional notes 3.'),
-    (4, N'Giả Tưởng Vũ Trụ', N'https://example.com/image4.jpg', N'Nội dung giả tưởng phong phú.', N'Hoàn thành', N'Mô tả chi tiết về truyện 4.', N'Ghi chú bổ sung 4.');
+    (N'Tiểu Thuyết 1', N'https://example.com/image1.jpg', N'Nội dung tiếng Việt có dấu.', N'Hoàn thành', N'Mô tả chi tiết về truyện 1.', N'Ghi chú bổ sung 1.'),
+    (N'Tiểu Thuyết 2', N'https://example.com/image2.jpg', N'Nội dung tiếng Việt có dấu và dài hơn.', N'Đang tiến hành', N'Mô tả chi tiết về truyện 2.', N'Ghi chú bổ sung 2.'),
+    (N'Adventure Story', N'https://example.com/image3.jpg', N'Content in English.', N'Hoàn thành', N'Detailed description of story 3.', N'Additional notes 3.'),
+    (N'Giả Tưởng Vũ Trụ', N'https://example.com/image4.jpg', N'Nội dung giả tưởng phong phú.', N'Hoàn thành', N'Mô tả chi tiết về truyện 4.', N'Ghi chú bổ sung 4.');
 GO
 
 /*==============================================================*/

@@ -55,7 +55,7 @@ const ModelCreateGenres = (props) => {
                             <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
                                 <option value="Nam">NAM</option>
                                 <option value="Nữ">NỮ</option>
-                                <option value="Khác">KHÁC</option>
+                                <option value="Tất cả">TẤT CẢ</option>
                             </select>
                         </div>
                     </form>

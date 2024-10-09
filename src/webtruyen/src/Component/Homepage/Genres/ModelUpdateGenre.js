@@ -82,7 +82,7 @@ const ModelUpdateGenres = (props) => {
                             >
                                 <option value="Nam">NAM</option>
                                 <option value="Nữ">NỮ</option>
-                                <option value="Khác">KHÁC</option>
+                                <option value="Tất cả">TẤT CẢ</option>
                             </select>
                         </div>
                     </form>

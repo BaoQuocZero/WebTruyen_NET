@@ -1,9 +1,7 @@
-// src/components/TacGiaComponent.js
 import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import { getAllGenres } from '../../CRUD';
-import Nav from '../../Nav/Nav';
 import '../Style.css';
 import ModelCreateGenres from './ModelCreateGenre';
 import ModelUpdateGenres from './ModelUpdateGenre';
@@ -39,13 +37,11 @@ const Genre = (props) => {
     const fetchListGenre = async () => {
         let res = await getAllGenres();
         console.log("res=", res.data);
-
         setListGenres(res.data);
     };
 
     return (
         <>
-            <Nav />
             <div className='genres-container'>
                 <div className='btn btn-primary'>
                     <button className="btn btn-primary "
@@ -64,7 +60,7 @@ const Genre = (props) => {
                     <table className="table table-hover table-bordered">
                         <thead>
                             <tr>
-                                <td scope="col">Mã thể loại</td>
+                                {/* <td scope="col">Mã thể loại</td> */}
                                 <td scope="col">Tên thể loại</td>
                                 <td scope="col">Cho giới tính</td>
                                 <td scope="col">Thuộc</td>
@@ -77,7 +73,7 @@ const Genre = (props) => {
                                 listGenres.map((item, index) => {
                                     return (
                                         <tr key={`table-user-${index}`}>
-                                            <td>{item.mA_THE_LOAI}</td>
+                                            {/* <td>{item.mA_THE_LOAI}</td> */}
                                             <td>{item.teN_THE_LOAI}</td>
                                             <td>{item.chO_GIOI_TINH}</td>
                                             <td>{item.thuoCs}</td>
