@@ -35,6 +35,19 @@ const updateAuthorById = async (id, updatedAuthor) => {
   }
 };
 
+const deleteAuthorById = async (id) => {
+  try {
+    // Đảm bảo ID đúng kiểu và URL chính xác
+    const response = await axios.delete(`https://localhost:7003/api/TacGia/id?id=${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating author:", error);
+    throw error;
+  }
+};
+
+
+
 
 //Truyện tranhpo==
 const getAllComic = () => {
@@ -96,6 +109,7 @@ export {
   postNewGenres,
   updateAuthorById,
   updateGenreById,
+  deleteAuthorById,
 };
 
 //Hàm thêm tác giả

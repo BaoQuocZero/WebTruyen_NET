@@ -60,7 +60,7 @@ const Genre = (props) => {
                     <table className="table table-hover table-bordered">
                         <thead>
                             <tr>
-                                {/* <td scope="col">Mã thể loại</td> */}
+                                <td scope="col">Mã thể loại</td>
                                 <td scope="col">Tên thể loại</td>
                                 <td scope="col">Cho giới tính</td>
                                 <td scope="col">Thuộc</td>
@@ -73,7 +73,7 @@ const Genre = (props) => {
                                 listGenres.map((item, index) => {
                                     return (
                                         <tr key={`table-user-${index}`}>
-                                            {/* <td>{item.mA_THE_LOAI}</td> */}
+                                            <td>{item.mA_THE_LOAI}</td>
                                             <td>{item.teN_THE_LOAI}</td>
                                             <td>{item.chO_GIOI_TINH}</td>
                                             <td>{item.thuoCs}</td>

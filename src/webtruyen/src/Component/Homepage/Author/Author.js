@@ -1,7 +1,7 @@
 import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
-import { getAllArist } from '../../CRUD';
+import { getAllArist, deleteAuthorById } from '../../CRUD';
 import '../Style.css';
 import ModelUpdateAuthor from './ModelUpdateAuthor';
 import ModelCreateAuthor from './ModelCreateAuthor';
@@ -29,7 +29,17 @@ const Author = (props) => {
       gioI_TINH_TAC_GIA: item.gioI_TINH_TAC_GIA,
       quoC_GIA_TAC_GIA: item.quoC_GIA_TAC_GIA,
     });
-  }
+  };
+
+  const handleDeleteAuthor = async (id) => {
+    if (window.confirm("Are you sure you want to delete this author?")) {
+      console.log("id=", id)
+      await deleteAuthorById(id);
+      // Cập nhật lại danh sách sau khi xóa
+      await fetchListArtist();
+    }
+  };
+
 
   const [listArtist, setListArtist] = useState([]);
 
@@ -97,7 +107,7 @@ const Author = (props) => {
                           selectedAuthorId={TacGia} // Truyền ID vào modal
                           fetchListArtist={fetchListArtist}
                         />
-                        <button className="btn btn-danger">Delete</button>
+                        <button className="btn btn-danger" onClick={() => { handleDeleteAuthor(item.mA_TAC_GIA) }}>Delete</button>
                       </td>
                     </tr>
                   );
