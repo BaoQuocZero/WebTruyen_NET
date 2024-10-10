@@ -13,10 +13,12 @@ namespace NewProject.Controllers
     {
         private readonly MyDbContext _context;
         private readonly ITheLoaiRepository _ITheLoaiRepository;
-        public TheLoaiController(MyDbContext context, ITheLoaiRepository ITheLoaiRepository)
+        private readonly IThuocRepository _thuocRepository;
+        public TheLoaiController(MyDbContext context, ITheLoaiRepository ITheLoaiRepository, IThuocRepository thuocRepository)
         {
             _context = context;
             _ITheLoaiRepository = ITheLoaiRepository;
+            _thuocRepository = thuocRepository;
         }
         [HttpGet]
         public async Task<IActionResult> GetAllTheLoai()
@@ -70,6 +72,17 @@ namespace NewProject.Controllers
             {
                 return BadRequest();
             }
+
+
+            var thuocs = await _context.THUOCs
+                                  .Where(s => s.MA_THE_LOAI == id) // Thay đổi điều kiện theo cấu trúc của bạn
+                                  .ToListAsync();
+            foreach (var thuoc in thuocs)
+            {
+                _thuocRepository.DeleteWithId(thuoc);
+            }
+
+
             _ITheLoaiRepository.DeleteWithId(TheLoai);
             return Ok();
         }

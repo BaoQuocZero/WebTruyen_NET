@@ -14,10 +14,12 @@ namespace NewProject.Controllers
     {
         private readonly MyDbContext _context;
         private readonly ItacgiaRepository _itacgiaRepository;
-        public TacGiaController(MyDbContext context, ItacgiaRepository itacgiaRepository) 
+        private readonly ISangtacRepository _satacRepository;
+        public TacGiaController(MyDbContext context, ItacgiaRepository itacgiaRepository, ISangtacRepository sangtacRepository) 
         {
             _context = context;
             _itacgiaRepository = itacgiaRepository;
+            _satacRepository = sangtacRepository;
         }
 
         [HttpGet]
@@ -102,7 +104,17 @@ namespace NewProject.Controllers
             }
 
 
-            _itacgiaRepository.DeleteWithId(tacgia);
+            var sangtacAll = await _context.SANG_TACs
+                                   .Where(s => s.MA_TAC_GIA == id) // Thay đổi điều kiện theo cấu trúc của bạn
+                                   .ToListAsync();
+            foreach (var sangtac in sangtacAll)
+            {
+                _satacRepository.DeleteWithId(sangtac);
+            }
+
+            
+            
+             _itacgiaRepository.DeleteWithId(tacgia);
             return Ok();
         }
 
