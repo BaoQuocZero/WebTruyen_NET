@@ -2,11 +2,12 @@
 import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
-import { getAllComic } from '../../CRUD';
+import { getAllAuthor, getAllComic, getAllGenres } from '../../CRUD';
 import '../Style.css';
+import ModelCreateComic from './ModelCreateComic';
 
 const Comic = (props) => {
-
+    const [showModalCreateComic, setShowModalCreateComic] = useState(false);
     const [listComic, setListComic] = useState([]);
 
     useEffect(() => {
@@ -23,6 +24,18 @@ const Comic = (props) => {
     return (
         <>
             <div className='comic-container'>
+                <div className='btn btn-primary'>
+                    <button className="btn btn-primary"
+                        onClick={() =>
+                            setShowModalCreateComic(true)}>
+                        <FaRegPlusSquare /> Add new author
+                    </button>
+                </div>
+                <ModelCreateComic
+                    show={showModalCreateComic}
+                    setShow={setShowModalCreateComic}
+                />
+
                 <table className="table table-hover table-bordered">
                     <thead>
                         <tr>

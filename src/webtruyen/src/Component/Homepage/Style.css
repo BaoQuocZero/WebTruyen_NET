@@ -3,6 +3,12 @@
     margin-top: 10%;
 }
 
+.author-container{
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
 .genres-container{
     margin-top: 10%;
 }

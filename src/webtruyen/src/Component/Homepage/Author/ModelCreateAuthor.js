@@ -3,12 +3,11 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FaRegPlusSquare } from "react-icons/fa";
-import { toast } from 'react-toastify';
-import { postNewArtist } from '../../CRUD';
+import { postNewAuthor } from '../../CRUD';
 
 const ModelCreateAuthor = (props) => {
 
-    const { show, setShow, fetchListArtist } = props;
+    const { show, setShow, fetchListAuthor } = props;
 
     const handleClose = () => {
         setShow(false);
@@ -23,10 +22,10 @@ const ModelCreateAuthor = (props) => {
 
     const handleSubmitCreateAuthor = async () => {
 
-        let data = await postNewArtist(tentacgia, gioitinh, quocgia)
+        let data = await postNewAuthor(tentacgia, gioitinh, quocgia)
         console.log("Component res = ", data)
         handleClose();
-        await props.fetchListArtist()
+        await props.fetchListAuthor()
     };
 
     return (

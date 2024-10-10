@@ -3,11 +3,11 @@
 import axios from "axios";
 
 //Tác giả
-const getAllArist = () => {
+const getAllAuthor = () => {
   return axios.get("https://localhost:7003/api/TacGia");
 };
 
-const postNewArtist = (tentacgia, gioitinh, quocgia) => {
+const postNewAuthor = (tentacgia, gioitinh, quocgia) => {
   const data = new FormData();
   const newData = [];
   data.append('teN_TAC_GIA', tentacgia);
@@ -101,15 +101,28 @@ const updateGenreById = async (id, updatedGenre) => {
   }
 };
 
+const deleteGenresById = async (id) => {
+  try {
+    // Đảm bảo ID đúng kiểu và URL chính xác
+    const response = await axios.delete(`https://localhost:7003/api/TheLoai/id?id=${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error updating author:", error);
+    throw error;
+  }
+};
+
 export {
-  getAllArist,
-  postNewArtist,
+  //Tacgia
+  getAllAuthor,
+  postNewAuthor,
   getAllComic,
   getAllGenres,
   postNewGenres,
   updateAuthorById,
   updateGenreById,
   deleteAuthorById,
+  deleteGenresById
 };
 
 //Hàm thêm tác giả

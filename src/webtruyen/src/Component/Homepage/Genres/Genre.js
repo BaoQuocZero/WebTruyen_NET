@@ -1,7 +1,7 @@
 import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
-import { getAllGenres } from '../../CRUD';
+import { getAllGenres, deleteGenresById } from '../../CRUD';
 import '../Style.css';
 import ModelCreateGenres from './ModelCreateGenre';
 import ModelUpdateGenres from './ModelUpdateGenre';
@@ -26,7 +26,16 @@ const Genre = (props) => {
             chO_GIOI_TINH: item.chO_GIOI_TINH,
             thuoCs: item.thuoCs,
         });
-    }
+    };
+
+    const handleDeleteGenres = async (id) => {
+        if (window.confirm("Are you sure you want to delete this author?")) {
+            console.log("id=", id)
+            await deleteGenresById(id);
+            // Cập nhật lại danh sách sau khi xóa
+            await fetchListGenre();
+        }
+    };
 
     const [listGenres, setListGenres] = useState([]);
 
@@ -60,7 +69,7 @@ const Genre = (props) => {
                     <table className="table table-hover table-bordered">
                         <thead>
                             <tr>
-                                <td scope="col">Mã thể loại</td>
+                                {/* <td scope="col">Mã thể loại</td> */}
                                 <td scope="col">Tên thể loại</td>
                                 <td scope="col">Cho giới tính</td>
                                 <td scope="col">Thuộc</td>
@@ -73,7 +82,7 @@ const Genre = (props) => {
                                 listGenres.map((item, index) => {
                                     return (
                                         <tr key={`table-user-${index}`}>
-                                            <td>{item.mA_THE_LOAI}</td>
+                                            {/* <td>{item.mA_THE_LOAI}</td> */}
                                             <td>{item.teN_THE_LOAI}</td>
                                             <td>{item.chO_GIOI_TINH}</td>
                                             <td>{item.thuoCs}</td>
@@ -91,7 +100,7 @@ const Genre = (props) => {
                                                     selectedGenreId={TheLoai}
                                                     fetchListGenre={fetchListGenre}
                                                 />
-                                                <button className="btn btn-danger">Delete</button>
+                                                <button className="btn btn-danger" onClick={() => { handleDeleteGenres(item.mA_THE_LOAI) }}>Delete</button>
                                             </td>
                                         </tr>
                                     );

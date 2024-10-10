@@ -6,7 +6,7 @@ import { updateAuthorById } from '../../CRUD';
 
 const ModelUpdateAuthor = (props) => {
 
-    const { showUpdate, setShowUpdate, selectedAuthorId, fetchListArtist } = props; // Nhận thêm prop `authorId`
+    const { showUpdate, setShowUpdate, selectedAuthorId, fetchListAuthor } = props; // Nhận thêm prop `authorId`
 
     const [tentacgia, setNewTenTacGia] = useState("");
     const [gioitinh, setNewGioiTinh] = useState("Nam");
@@ -45,7 +45,7 @@ const ModelUpdateAuthor = (props) => {
             let data = await updateAuthorById(selectedAuthorId.mA_TAC_GIA, updatedAuthor);
             console.log("Update response:", data);
             handleClose();
-            fetchListArtist();
+            fetchListAuthor();
 
         } catch (error) {
             toast.error("Update failed! Check the console for more details.");

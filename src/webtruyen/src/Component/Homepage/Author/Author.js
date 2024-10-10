@@ -1,7 +1,7 @@
 import '../Style.css';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { useState, useEffect } from 'react';
-import { getAllArist, deleteAuthorById } from '../../CRUD';
+import { getAllAuthor, deleteAuthorById } from '../../CRUD';
 import '../Style.css';
 import ModelUpdateAuthor from './ModelUpdateAuthor';
 import ModelCreateAuthor from './ModelCreateAuthor';
@@ -36,21 +36,21 @@ const Author = (props) => {
       console.log("id=", id)
       await deleteAuthorById(id);
       // Cập nhật lại danh sách sau khi xóa
-      await fetchListArtist();
+      await fetchListAuthor();
     }
   };
 
 
-  const [listArtist, setListArtist] = useState([]);
+  const [listAuthor, setListAuthor] = useState([]);
 
   useEffect(() => {
-    fetchListArtist();
+    fetchListAuthor();
   }, []);
 
-  const fetchListArtist = async () => {
-    let res = await getAllArist();
+  const fetchListAuthor = async () => {
+    let res = await getAllAuthor();
     console.log("res=", res.data);
-    setListArtist(res.data);
+    setListAuthor(res.data);
   };
 
   return (
@@ -66,7 +66,7 @@ const Author = (props) => {
         <ModelCreateAuthor
           show={showModalCreateAuthor}
           setShow={setShowModalCreateAuthor}
-          fetchListArtist={fetchListArtist}
+          fetchListAuthor={fetchListAuthor}
         />
         <div className='author-content'>
           <table className="table table-hover table-bordered">
@@ -81,9 +81,9 @@ const Author = (props) => {
               </tr>
             </thead>
             <tbody>
-              {listArtist &&
-                listArtist.length > 0 &&
-                listArtist.map((item, index) => {
+              {listAuthor &&
+                listAuthor.length > 0 &&
+                listAuthor.map((item, index) => {
                   return (
                     <tr key={`table-user-${index}`}>
                       {/* <td>{item.mA_TAC_GIA}</td> */}
@@ -105,14 +105,14 @@ const Author = (props) => {
                           showUpdate={showModalUpdateAuthor}
                           setShowUpdate={setShowModalUpdateAuthor}
                           selectedAuthorId={TacGia} // Truyền ID vào modal
-                          fetchListArtist={fetchListArtist}
+                          fetchListAuthor={fetchListAuthor}
                         />
                         <button className="btn btn-danger" onClick={() => { handleDeleteAuthor(item.mA_TAC_GIA) }}>Delete</button>
                       </td>
                     </tr>
                   );
                 })}
-              {listArtist && listArtist.length === 0 && (
+              {listAuthor && listAuthor.length === 0 && (
                 <tr>
                   <td colSpan={"5"} style={{ textAlign: "center" }}>
                     Not found data
