@@ -2,13 +2,11 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { FaRegPlusSquare } from "react-icons/fa";
-import { toast } from 'react-toastify';
-import { postNewAuthor, getAllAuthor, getAllGenres } from '../../CRUD';
+import { getAllAuthor, getAllGenres, postNewComis } from '../../CRUD';
 
 const ModelCreateComic = (props) => {
 
-    const { show, setShow } = props;
+    const { show, setShow, fetchListComic } = props;
 
     const [listAuthor, setListAuthor] = useState([]);
     const [listGenres, setListGenres] = useState([]);
@@ -33,22 +31,38 @@ const ModelCreateComic = (props) => {
     const handleClose = () => {
         setShow(false);
         setTenTruyen("");
+        setAnhBia("");
         setNoiDung("");
         setTinhTrang("");
         setTheLoai("");
-        setGioiTinh("");
+        setMota("");
+        setGhichu("");
+        //setGioiTinh("");
         setTenTacGia("");
-        setQuocGia("");
+        //setQuocGia("");
     };
 
     const [tentruyen, setTenTruyen] = useState("");
+    const [anhbia, setAnhBia] = useState("");
     const [noidung, setNoiDung] = useState("");
     const [tinhtrang, setTinhTrang] = useState("");
     const [theloai, setTheLoai] = useState("");
-    const [gioitinh, setGioiTinh] = useState("");
+    const [mota, setMota] = useState("");
+    const [ghichu, setGhichu] = useState("");
+    // const [gioitinh, setGioiTinh] = useState("");
     const [tentacgia, setTenTacGia] = useState("");
-    const [quocgia, setQuocGia] = useState("");
+    //const [quocgia, setQuocGia] = useState("");
 
+    const handleSubmitCreateComic = async () => {
+
+        let data = await postNewComis(tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia)
+        console.log("Component res = ", data)
+        handleClose();
+        await fetchListComic()
+    };
+
+    console.log("check theloai=", theloai);
+    console.log("check tacgia=", tentacgia);
     return (
         <>
             <Modal
@@ -71,6 +85,15 @@ const ModelCreateComic = (props) => {
                             />
                         </div>
                         <div className="col-md-6">
+                            <label className="form-label">ẢNH BÌA</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                value={anhbia}
+                                onChange={(event) => setAnhBia(event.target.value)}
+                            />
+                        </div>
+                        <div className="col-md-6">
                             <label className="form-label">NỘI DUNG</label>
                             <input
                                 type="text"
@@ -89,26 +112,36 @@ const ModelCreateComic = (props) => {
                             />
                         </div>
                         <div className="col-md-6">
+                            <label className="form-label">MÔ TẢ</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                value={mota}
+                                onChange={(event) => setMota(event.target.value)}
+                            />
+                        </div>
+                        <div className="col-md-6">
+                            <label className="form-label">GHI CHÚ</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                value={ghichu}
+                                onChange={(event) => setGhichu(event.target.value)}
+                            />
+                        </div>
+                        <div className="col-md-6">
                             <label className="form-label">THỂ LOẠI</label>
                             <select
                                 className="form-select"
                                 value={theloai}
                                 onChange={(event) => setTheLoai(event.target.value)}
                             >
-                                <option value=""></option>
+                                <option></option>
                                 {listGenres.map((item, index) => (
-                                    <option value={item.teN_THE_LOAI}>
+                                    <option value={item.mA_THE_LOAI}>
                                         {item.teN_THE_LOAI}
                                     </option>
                                 ))}
-                            </select>
-                        </div>
-                        <div className="col-md-6">
-                            <label className="form-label">GIỚI TÍNH</label>
-                            <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
-                                <option value="Nam">NAM</option>
-                                <option value="Nữ">NỮ</option>
-                                <option value="Khác">TẤT CẢ</option>
                             </select>
                         </div>
                         <div className="col-md-6">
@@ -118,15 +151,23 @@ const ModelCreateComic = (props) => {
                                 value={tentacgia}
                                 onChange={(event) => setTenTacGia(event.target.value)}
                             >
-                                <option value=""></option>
+                                <option></option>
                                 {listAuthor.map((item, index) => (
-                                    <option value={item.teN_TAC_GIA}>
+                                    <option value={item.mA_TAC_GIA}>
                                         {item.teN_TAC_GIA}
                                     </option>
                                 ))}
                             </select>
                         </div>
-                        <div className="col-md-12">
+                        {/* <div className="col-md-6">
+                            <label className="form-label">CHO GIỚI TÍNH</label>
+                            <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
+                                <option value="Nam">NAM</option>
+                                <option value="Nữ">NỮ</option>
+                                <option value="Tất cả">TẤT CẢ</option>
+                            </select>
+                        </div> */}
+                        {/* <div className="col-md-12">
                             <label className="form-label">QUỐC GIA</label>
                             <input
                                 type="text"
@@ -134,14 +175,14 @@ const ModelCreateComic = (props) => {
                                 value={quocgia}
                                 onChange={(event) => setQuocGia(event.target.value)}
                             />
-                        </div>
+                        </div> */}
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="primary" /*onClick={() => handleSubmitCreateAuthor()}*/>
+                    <Button variant="primary" onClick={() => handleSubmitCreateComic()}>
                         Save
                     </Button>
                 </Modal.Footer>

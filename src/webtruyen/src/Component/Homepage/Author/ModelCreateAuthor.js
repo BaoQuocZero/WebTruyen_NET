@@ -25,7 +25,7 @@ const ModelCreateAuthor = (props) => {
         let data = await postNewAuthor(tentacgia, gioitinh, quocgia)
         console.log("Component res = ", data)
         handleClose();
-        await props.fetchListAuthor()
+        await fetchListAuthor();
     };
 
     return (

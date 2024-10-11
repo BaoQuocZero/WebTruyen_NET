@@ -49,26 +49,38 @@ const deleteAuthorById = async (id) => {
 
 
 
-//Truyện tranhpo==
+//Truyện tranh
 const getAllComic = () => {
   return axios.get("https://localhost:7003/api/TruyenTranh");
 };
 
-// const postNewComis = (tentacgia, gioitinh, quocgia) => {
-//   const data = new FormData();
-//   const newData = [];
-//   data.append('teN_TAC_GIA', tentacgia);
-//   data.append('gioI_TINH_TAC_GIA', gioitinh);
-//   data.append('quoC_GIA_TAC_GIA', quocgia);
-//   newData.push({
-//     teN_TAC_GIA: tentacgia,
-//     gioI_TINH_TAC_GIA: gioitinh,
-//     quoC_GIA_TAC_GIA: quocgia
-//   });
-//   console.log("check data: ", newData[0]);
+const postNewComis = (tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia) => {
+  const data = new FormData();
+  const newData = [];
+  data.append('teN_TRUYEN', tentruyen);
+  data.append('anH_BIA', anhbia);
+  data.append('noI_DUNG_TRUYEN', noidung);
+  data.append('tinH_TRANG', tinhtrang);
+  //data.append('chO_GIOI_TINH', gioitinh);
+  data.append('mO_TA_TRUYEN', mota);
+  data.append('ghI_CHU_TRUYEN', ghichu);
+  data.append('mA_THE_LOAI', theloai);
+  data.append('mA_TAC_GIA', tentacgia);
+  newData.push({
+    teN_TRUYEN: tentruyen,
+    anH_BIA: anhbia,
+    noI_DUNG_TRUYEN: noidung,
+    tinH_TRANG: tinhtrang,
+    //chO_GIOI_TINH: gioitinh,
+    mO_TA_TRUYEN: mota,
+    ghI_CHU_TRUYEN: ghichu,
+    mA_THE_LOAI: theloai,
+    mA_TAC_GIA: tentacgia
+  });
+  console.log("check data: ", newData[0]);
 
-//   return axios.post("https://localhost:7003/api/TacGia", newData[0]);
-// }
+  return axios.post("https://localhost:7003/api/TruyenTranh", newData[0]);
+}
 
 //Thể loại
 const getAllGenres = () => {
@@ -116,54 +128,16 @@ export {
   //Tacgia
   getAllAuthor,
   postNewAuthor,
+  updateAuthorById,
+  deleteAuthorById,
+
+  //Truyentranh
   getAllComic,
+  postNewComis,
+
+  //Theloai
   getAllGenres,
   postNewGenres,
-  updateAuthorById,
   updateGenreById,
-  deleteAuthorById,
-  deleteGenresById
+  deleteGenresById,
 };
-
-//Hàm thêm tác giả
-// const addTacGia = async (tacGia) => {
-//     try {
-//         const response = await axios.post(`https://localhost:7003/TacGia`, tacGia);
-//         return response.data;
-//     } catch (error) {
-//         console.error("Error adding Tac Gia:", error);
-//         throw error;
-//     }
-// };
-
-// // Hàm cập nhật tác giả
-// export const updateTacGia = async (id, tacGia) => {
-//     try {
-//         const response = await axios.put(`https://localhost:7003/TacGia/${id}`, tacGia);
-//         return response.data;
-//     } catch (error) {
-//         console.error("Error updating Tac Gia:", error);
-//         throw error;
-//     }
-// };
-
-// // Hàm xóa tác giả
-// export const deleteTacGia = async (id) => {
-//     try {
-//         await axios.delete(`https://localhost:7003/TacGia/${id}`);
-//     } catch (error) {
-//         console.error("Error deleting Tac Gia:", error);
-//         throw error;
-//     }
-// };
-
-// // Hàm lấy tác giả theo ID
-// export const fetchTacGiaById = async (id) => {
-//     try {
-//         const response = await axios.get(`https://localhost:7003/TacGia/${id}`);
-//         return response.data;
-//     } catch (error) {
-//         console.error("Error fetching Tac Gia by ID:", error);
-//         throw error;
-//     }
-// };

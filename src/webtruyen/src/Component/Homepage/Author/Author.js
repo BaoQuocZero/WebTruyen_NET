@@ -72,7 +72,7 @@ const Author = (props) => {
           <table className="table table-hover table-bordered">
             <thead>
               <tr>
-                {/* <td scope="col">Mã tác giả</td> */}
+                <td scope="col">Mã tác giả</td>
                 <td scope="col">Tên tác giả</td>
                 <td scope="col">Sáng tác</td>
                 <td scope="col">Giới tính</td>
@@ -86,7 +86,7 @@ const Author = (props) => {
                 listAuthor.map((item, index) => {
                   return (
                     <tr key={`table-user-${index}`}>
-                      {/* <td>{item.mA_TAC_GIA}</td> */}
+                      <td>{item.mA_TAC_GIA}</td>
                       <td>{item.teN_TAC_GIA}</td>
                       <td>{item.sanG_TACs}</td>
                       <td>{item.gioI_TINH_TAC_GIA}</td>
