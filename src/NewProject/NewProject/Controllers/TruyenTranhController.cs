@@ -50,7 +50,7 @@ namespace NewProject.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostTruyenTranh(TRUYEN_TRANH_DTOs truyen_tranh_DTOs)
+        public async Task<IActionResult> PostTruyenTranh(truyentranhCreateDTO truyen_tranh_DTOs)
         {
             var truyentranh = _context.TRUYEN_TRANHs.FirstOrDefault(x => x.TEN_TRUYEN == truyen_tranh_DTOs.TEN_TRUYEN);
             
