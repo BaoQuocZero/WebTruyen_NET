@@ -58,7 +58,7 @@ const Author = (props) => {
           <button className="btn btn-primary"
             onClick={() =>
               setShowModalCreateAuthor(true)}>
-            <FaRegPlusSquare /> Add new author
+            <FaRegPlusSquare /> NEW
           </button>
         </div>
         <ModelCreateAuthor
