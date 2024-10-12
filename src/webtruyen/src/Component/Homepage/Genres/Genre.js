@@ -57,7 +57,7 @@ const Genre = (props) => {
                         onClick={() =>
                             setShowModalCreateGenres(true)
                         }>
-                        <FaRegPlusSquare /> Add new Genres
+                        <FaRegPlusSquare /> NEW
                     </button>
                 </div>
                 <ModelCreateGenres

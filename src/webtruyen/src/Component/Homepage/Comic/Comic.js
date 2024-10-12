@@ -61,7 +61,7 @@ const Comic = () => {
                     <button className="btn btn-primary"
                         onClick={() =>
                             setShowModalCreateComic(true)}>
-                        <FaRegPlusSquare /> Add new author
+                        <FaRegPlusSquare /> NEW
                     </button>
                 </div>
                 <ModelCreateComic
