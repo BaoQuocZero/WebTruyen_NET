@@ -1,6 +1,15 @@
 
 .comic-container{
     margin-top: 10%;
+    font-size: 15px;
+}
+
+.btn_update{
+    width: 80px;
+}
+
+.btn_delete{
+    width: 80px;
 }
 
 .author-container{

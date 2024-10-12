@@ -35,11 +35,9 @@ const Author = (props) => {
     if (window.confirm("Are you sure you want to delete this author?")) {
       console.log("id=", id)
       await deleteAuthorById(id);
-      // Cập nhật lại danh sách sau khi xóa
       await fetchListAuthor();
     }
   };
-
 
   const [listAuthor, setListAuthor] = useState([]);
 
@@ -93,7 +91,7 @@ const Author = (props) => {
                       <td>{item.quoC_GIA_TAC_GIA}</td>
                       <td>
                         <button
-                          className="btn btn-warning mx-3"
+                          className="btn_update btn btn-warning mx-2"
                           onClick={() => {
                             handleClickUpdate(item);
                             setShowModalUpdateAuthor(true); // Hiển thị modal cập nhật
@@ -107,7 +105,7 @@ const Author = (props) => {
                           selectedAuthorId={TacGia} // Truyền ID vào modal
                           fetchListAuthor={fetchListAuthor}
                         />
-                        <button className="btn btn-danger" onClick={() => { handleDeleteAuthor(item.mA_TAC_GIA) }}>Delete</button>
+                        <button className="btn_delete btn btn-danger mx-2" onClick={() => { handleDeleteAuthor(item.mA_TAC_GIA) }}>Delete</button>
                       </td>
                     </tr>
                   );

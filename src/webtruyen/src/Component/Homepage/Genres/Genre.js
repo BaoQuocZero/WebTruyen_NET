@@ -29,7 +29,7 @@ const Genre = (props) => {
     };
 
     const handleDeleteGenres = async (id) => {
-        if (window.confirm("Are you sure you want to delete this author?")) {
+        if (window.confirm("Are you sure you want to delete this genres?")) {
             console.log("id=", id)
             await deleteGenresById(id);
             // Cập nhật lại danh sách sau khi xóa
@@ -72,7 +72,7 @@ const Genre = (props) => {
                                 <td scope="col">Mã thể loại</td>
                                 <td scope="col">Tên thể loại</td>
                                 <td scope="col">Cho giới tính</td>
-                                <td scope="col">Thuộc</td>
+                                {/* <td scope="col">Thuộc</td> */}
                                 <td scope="col">Action</td>
                             </tr>
                         </thead>
@@ -85,9 +85,9 @@ const Genre = (props) => {
                                             <td>{item.mA_THE_LOAI}</td>
                                             <td>{item.teN_THE_LOAI}</td>
                                             <td>{item.chO_GIOI_TINH}</td>
-                                            <td>{item.thuoCs}</td>
+                                            {/* <td>{item.thuoCs}</td> */}
                                             <td>
-                                                <button className="btn btn-warning mx-3"
+                                                <button className="btn_update btn btn-warning mx-3"
                                                     onClick={() => {
                                                         handleClickUpdate(item);
                                                         setShowModalUpdateGenres(true)
@@ -100,7 +100,7 @@ const Genre = (props) => {
                                                     selectedGenreId={TheLoai}
                                                     fetchListGenre={fetchListGenre}
                                                 />
-                                                <button className="btn btn-danger" onClick={() => { handleDeleteGenres(item.mA_THE_LOAI) }}>Delete</button>
+                                                <button className="btn_delete btn btn-danger" onClick={() => { handleDeleteGenres(item.mA_THE_LOAI) }}>Delete</button>
                                             </td>
                                         </tr>
                                     );
