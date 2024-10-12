@@ -41,8 +41,10 @@ namespace NewProject.Controllers
                         NOI_DUNG = p.NOI_DUNG_TRUYEN,
                         TINH_TRANG = p.TINH_TRANG,
                         THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.TEN_THE_LOAI),
+                        MA_THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.MA_THE_LOAI),
                         CHO_GIOI_TINH = p.THUOCs.Select(s => s.THE_LOAI.CHO_GIOI_TINH),
                         TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.TEN_TAC_GIA),
+                        MA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.MA_TAC_GIA),
                         QUOC_GIA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.QUOC_GIA_TAC_GIA)
                     });
 
@@ -111,14 +113,16 @@ namespace NewProject.Controllers
                         NOI_DUNG = p.NOI_DUNG_TRUYEN,
                         TINH_TRANG = p.TINH_TRANG,
                         THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.TEN_THE_LOAI),
+                        MA_THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.MA_THE_LOAI),
                         CHO_GIOI_TINH = p.THUOCs.Select(s => s.THE_LOAI.CHO_GIOI_TINH),
                         TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.TEN_TAC_GIA),
+                        MA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.MA_TAC_GIA),
                         QUOC_GIA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.QUOC_GIA_TAC_GIA)
                     });
 
             var sangtac = await _context.SANG_TACs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id);
 
-            return Ok(sangtac);
+            return Ok(product_info);
         }
 
 
