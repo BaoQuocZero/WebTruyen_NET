@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
 using NewProject.DTOs;
 using NewProject.Models;
+using NewProject.Repositories;
 using NewProject.Repository;
 namespace NewProject.Controllers
 {
@@ -64,27 +65,28 @@ namespace NewProject.Controllers
             _ITheLoaiRepository.UpdateWithId(TheLoai);
             return Ok("đã thay đổi thành công");
         }
-        [HttpDelete("id")]
-        public async Task<IActionResult> DeleteByIdTacGia(int id)
-        {
-            var TheLoai = await _ITheLoaiRepository.GetById(id);
-            if (TheLoai == null)
-            {
-                return BadRequest();
-            }
+
+        //[HttpDelete("id")]
+        //public async Task<IActionResult> DeleteByIdTacGia(int id)
+        //{
+        //    var TheLoai = await _ITheLoaiRepository.GetById(id);
+        //    if (TheLoai == null)
+        //    {
+        //        return BadRequest();
+        //    }
 
 
-            var thuocs = await _context.THUOCs
-                                  .Where(s => s.MA_THE_LOAI == id) // Thay đổi điều kiện theo cấu trúc của bạn
-                                  .ToListAsync();
-            foreach (var thuoc in thuocs)
-            {
-                _thuocRepository.DeleteWithId(thuoc);
-            }
+        //    var thuocs = await _context.THUOCs
+        //                          .Where(s => s.MA_THE_LOAI == id) // Thay đổi điều kiện theo cấu trúc của bạn
+        //                          .ToListAsync();
+        //    foreach (var thuoc in thuocs)
+        //    {
+        //        _thuocRepository.DeleteWithId(thuoc);
+        //    }
 
 
-            _ITheLoaiRepository.DeleteWithId(TheLoai);
-            return Ok();
-        }
+        //    _ITheLoaiRepository.DeleteWithId(TheLoai);
+        //    return Ok();
+        //}
     }
 }

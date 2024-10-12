@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
+using NewProject.Repositories;
 using NewProject.Repository;
 using System;
 

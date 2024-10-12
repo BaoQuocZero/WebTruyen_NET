@@ -1,20 +1,19 @@
-
-﻿// Repository/ITHUOCRepository.cs
+// Repository/ITHUOCRepository.cs
+using NewProject.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using NewProject.Models;
 
-namespace NewProject.Repository
+namespace NewProject.Repositories
 {
-    public interface IThuocRepository : IRepository<THUOC>
+    public interface IThuocRepository
     {
-        Task<IEnumerable<THUOC>> GetAllAsync();
-        Task<THUOC> GetByIdAsync(int maTruyen, int maTheLoai);
-        Task<THUOC> AddAsync(THUOC THUOC);
-        Task UpdateAsync(THUOC THUOC);
-        Task DeleteAsync(int maTruyen, int maTheLoai);
-        Task<bool> ExistsAsync(int maTruyen, int maTheLoai);
+        Task<IEnumerable<ThuocReadDTO>> GetAllAsync();
+        Task<ThuocReadDTO> GetByIdAsync(int maTruyen, int maTheLoai);
+        Task<ThuocReadDTO> CreateAsync(ThuocCreateDTO dto);
+        Task<bool> UpdateAsync(int maTruyen, int maTheLoai, ThuocUpdateDTO dto);
+        Task<bool> DeleteAsync(int maTruyen, int maTheLoai);
     }
 }
+
 
 
