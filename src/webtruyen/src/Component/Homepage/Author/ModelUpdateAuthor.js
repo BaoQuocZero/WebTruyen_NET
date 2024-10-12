@@ -64,7 +64,7 @@ const ModelUpdateAuthor = (props) => {
                 backdrop="static"
                 className='model-add-user'
             >
-                <h1 style={{ textAlign: 'center' }}>Update</h1>
+                <h1 style={{ textAlign: 'center' }}>Update Author</h1>
                 <Modal.Body>
 
                     <form className="row g-3">

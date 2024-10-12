@@ -37,7 +37,7 @@ const ModelCreateAuthor = (props) => {
                 backdrop="static"
                 className='model-add-user'
             >
-                <h1 style={{ textAlign: 'center' }}>Create</h1>
+                <h1 style={{ textAlign: 'center' }}>Create Author</h1>
                 <Modal.Body>
                     <form className="row g-3">
                         <div className="col-md-6">

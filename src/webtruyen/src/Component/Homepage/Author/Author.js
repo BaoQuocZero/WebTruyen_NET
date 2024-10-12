@@ -72,7 +72,7 @@ const Author = (props) => {
               <tr>
                 <td scope="col">Mã tác giả</td>
                 <td scope="col">Tên tác giả</td>
-                <td scope="col">Sáng tác</td>
+                {/* <td scope="col">Sáng tác</td> */}
                 <td scope="col">Giới tính</td>
                 <td scope="col">Quốc gia</td>
                 <td scope="col">Action</td>
@@ -86,7 +86,7 @@ const Author = (props) => {
                     <tr key={`table-user-${index}`}>
                       <td>{item.mA_TAC_GIA}</td>
                       <td>{item.teN_TAC_GIA}</td>
-                      <td>{item.sanG_TACs}</td>
+                      {/* <td>{item.sanG_TACs}</td> */}
                       <td>{item.gioI_TINH_TAC_GIA}</td>
                       <td>{item.quoC_GIA_TAC_GIA}</td>
                       <td>
