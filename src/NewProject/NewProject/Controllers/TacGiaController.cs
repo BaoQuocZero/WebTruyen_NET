@@ -116,7 +116,7 @@ namespace NewProject.Controllers
             
              _itacgiaRepository.DeleteWithId(tacgia);
             return Ok();
-        }
+        }       
 
     }
 }

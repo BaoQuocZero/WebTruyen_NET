@@ -47,6 +47,10 @@ const getAllComic = () => {
   return axios.get("https://localhost:7003/api/TruyenTranh");
 };
 
+const getAllComicByAuthor = (MA_TAC_GIA) => {
+  return axios.get(`https://localhost:7003/api/TruyenTranh/tacgia/${MA_TAC_GIA}`);
+};
+
 const postNewComis = (tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia) => {
   return axios.post("https://localhost:7003/api/TruyenTranh", {
     teN_TRUYEN: tentruyen,
@@ -140,6 +144,7 @@ export {
 
   //Truyentranh
   getAllComic,
+  getAllComicByAuthor,
   postNewComis,
   updateComicById,
   deleteComicById,

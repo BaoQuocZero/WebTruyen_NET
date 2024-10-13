@@ -55,11 +55,42 @@ namespace NewProject.Controllers
             return Ok(product_info);
         }
 
+        [HttpGet("tacgia/{maTacGia}")]
+        public async Task<IActionResult> GetTruyenTranhByAuthor(int maTacGia)
+        {
+            var truyenTranh = await _context.TRUYEN_TRANHs
+                .Include(p => p.SANG_TACs)
+                .ThenInclude(s => s.TAC_GIA)
+                .Include(p => p.THUOCs)
+                .ThenInclude(t => t.THE_LOAI)
+                .Where(p => p.SANG_TACs.Any(s => s.MA_TAC_GIA == maTacGia))
+                .Select(p => new
+                {
+                    TEN_TRUYEN = p.TEN_TRUYEN,
+                    ANH_BIA = p.ANH_BIA,
+                    NOI_DUNG_TRUYEN = p.NOI_DUNG_TRUYEN,
+                    TINH_TRANG = p.TINH_TRANG,
+                    MO_TA_TRUYEN = p.MO_TA_TRUYEN,
+                    GHI_CHU_TRUYEN = p.GHI_CHU_TRUYEN,
+                    THE_LOAI = p.THUOCs.Select(t => t.THE_LOAI.TEN_THE_LOAI),
+                    CHO_GIOI_TINH = p.THUOCs.Select(t => t.THE_LOAI.CHO_GIOI_TINH),
+                    MA_THE_LOAI = p.THUOCs.Select(t => t.THE_LOAI.MA_THE_LOAI).FirstOrDefault(),
+                    MA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.MA_TAC_GIA).FirstOrDefault()
+                }).ToListAsync();
+
+            if (!truyenTranh.Any())
+            {
+                return NotFound(new { message = "Không tìm thấy truyện tranh của tác giả này." });
+            }
+
+            return Ok(truyenTranh);
+        }
+
         //[HttpPost]
         //public async Task<IActionResult> PostTruyenTranh(truyentranhCreateDTO truyen_tranh_DTOs)
         //{
         //    var truyentranh = _context.TRUYEN_TRANHs.FirstOrDefault(x => x.TEN_TRUYEN == truyen_tranh_DTOs.TEN_TRUYEN);
-            
+
 
         //    if (truyentranh == null)
         //    {
@@ -75,7 +106,7 @@ namespace NewProject.Controllers
         //        };
         //        await _itruyentranhRepository.AddNew(newTruyenTranh);
 
-               
+
 
         //        var newSangTac = new SANG_TAC
         //        {
@@ -144,7 +175,6 @@ namespace NewProject.Controllers
             //_context.SaveChanges();
             //cách 2
 
-
             truyentranh.TEN_TRUYEN = truyentranhDTOs.TEN_TRUYEN;
             truyentranh.ANH_BIA = truyentranhDTOs.ANH_BIA;
             truyentranh.NOI_DUNG_TRUYEN = truyentranhDTOs.NOI_DUNG_TRUYEN;
@@ -190,8 +220,6 @@ namespace NewProject.Controllers
           
             return Ok("đã thay đổi thành công");
         }
-
-
 
 
         //[HttpDelete("id")]
