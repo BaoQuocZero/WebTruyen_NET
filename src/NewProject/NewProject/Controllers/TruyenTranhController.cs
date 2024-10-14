@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿//TruyenTranhController.cs
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
@@ -86,49 +87,49 @@ namespace NewProject.Controllers
             return Ok(truyenTranh);
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> PostTruyenTranh(truyentranhCreateDTO truyen_tranh_DTOs)
-        //{
-        //    var truyentranh = _context.TRUYEN_TRANHs.FirstOrDefault(x => x.TEN_TRUYEN == truyen_tranh_DTOs.TEN_TRUYEN);
+        [HttpPost]
+        public async Task<IActionResult> PostTruyenTranh(truyentranhCreateDTO truyen_tranh_DTOs)
+        {
+            var truyentranh = _context.TRUYEN_TRANHs.FirstOrDefault(x => x.TEN_TRUYEN == truyen_tranh_DTOs.TEN_TRUYEN);
 
 
-        //    if (truyentranh == null)
-        //    {
-        //        var newTruyenTranh = new TRUYEN_TRANH
-        //        {
+            if (truyentranh == null)
+            {
+                var newTruyenTranh = new TRUYEN_TRANH
+                {
 
-        //            TEN_TRUYEN = truyen_tranh_DTOs.TEN_TRUYEN,
-        //            ANH_BIA = truyen_tranh_DTOs.ANH_BIA,
-        //            NOI_DUNG_TRUYEN = truyen_tranh_DTOs.NOI_DUNG_TRUYEN,
-        //            TINH_TRANG = truyen_tranh_DTOs.TINH_TRANG,
-        //            MO_TA_TRUYEN = truyen_tranh_DTOs.MO_TA_TRUYEN,
-        //            GHI_CHU_TRUYEN = truyen_tranh_DTOs.GHI_CHU_TRUYEN
-        //        };
-        //        await _itruyentranhRepository.AddNew(newTruyenTranh);
-
-
-
-        //        var newSangTac = new SANG_TAC
-        //        {
-        //            MA_TAC_GIA = truyen_tranh_DTOs.MA_TAC_GIA,
-        //            MA_TRUYEN = newTruyenTranh.MA_TRUYEN
-        //        };
-        //        await _sangtacRepository.AddNew(newSangTac);
-
-
-        //        var newThuoc = new THUOC
-        //        {
-        //            MA_THE_LOAI = truyen_tranh_DTOs.MA_THE_LOAI,
-        //            MA_TRUYEN = newTruyenTranh.MA_TRUYEN
-        //        };
-        //        await _thuocRepository.AddNew(newThuoc);
+                    TEN_TRUYEN = truyen_tranh_DTOs.TEN_TRUYEN,
+                    ANH_BIA = truyen_tranh_DTOs.ANH_BIA,
+                    NOI_DUNG_TRUYEN = truyen_tranh_DTOs.NOI_DUNG_TRUYEN,
+                    TINH_TRANG = truyen_tranh_DTOs.TINH_TRANG,
+                    MO_TA_TRUYEN = truyen_tranh_DTOs.MO_TA_TRUYEN,
+                    GHI_CHU_TRUYEN = truyen_tranh_DTOs.GHI_CHU_TRUYEN
+                };
+                await _itruyentranhRepository.AddNewAsync(newTruyenTranh);
 
 
 
-        //        return Ok("Truyen tranh moi la");
-        //    }
-        //    return BadRequest("Truyen tranh nay da ton tai");
-        //}
+                var newSangTac = new SANG_TAC
+                {
+                    MA_TAC_GIA = truyen_tranh_DTOs.MA_TAC_GIA,
+                    MA_TRUYEN = newTruyenTranh.MA_TRUYEN
+                };
+                await _sangtacRepository.AddNewAsync(newSangTac);
+
+
+                var newThuoc = new ThuocCreateDTO
+                {
+                    MA_THE_LOAI = truyen_tranh_DTOs.MA_THE_LOAI,
+                    MA_TRUYEN = newTruyenTranh.MA_TRUYEN
+                };
+                await _thuocRepository.CreateAsync(newThuoc);
+
+
+
+                return Ok("Truyen tranh moi la");
+            }
+            return BadRequest("Truyen tranh nay da ton tai");
+        }
 
 
         [HttpGet("id")]
@@ -216,42 +217,65 @@ namespace NewProject.Controllers
 
 
 
-            _itruyentranhRepository.UpdateWithId(truyentranh);
+            _itruyentranhRepository.UpdateWithIdAsync(truyentranh);
           
             return Ok("đã thay đổi thành công");
         }
 
 
-        //[HttpDelete("id")]
-        //public async Task<IActionResult> DeleteByIdTruyenTranh(int id)
-        //{
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteByIdTruyenTranh(int id)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
 
-        //    var sangtacs = await _context.SANG_TACs
-        //                           .Where(s => s.MA_TRUYEN == id ) // Thay đổi điều kiện theo cấu trúc của bạn
-        //                           .ToListAsync();
-        //    foreach (var sangtac in sangtacs)
-        //    {
-        //        _sangtacRepository.DeleteWithId(sangtac);
-        //    }
+            try
+            {
+                // Xóa SANG_TACs liên quan
+                var sangtacs = await _context.SANG_TACs
+                                       .Where(s => s.MA_TRUYEN == id)
+                                       .ToListAsync();
 
-           
-        //    var thuocs = await _context.THUOCs
-        //                           .Where(s => s.MA_TRUYEN == id) // Thay đổi điều kiện theo cấu trúc của bạn
-        //                           .ToListAsync();
-        //    foreach (var thuoc in thuocs)
-        //    {
-        //        _thuocRepository.DeleteWithId(thuoc);
-        //    }
-        //    var truyentranh = await _itruyentranhRepository.GetById(id);
-        //    if (truyentranh == null)
-        //    {
-        //        return BadRequest();
-        //    }
+                foreach (var sangtac in sangtacs)
+                {
+                    await _sangtacRepository.DeleteWithIdAsync(sangtac); // Đảm bảo phương thức hỗ trợ async
+                }
 
+                // Xóa THUOCs liên quan
+                var thuocs = await _context.THUOCs
+                                       .Where(s => s.MA_TRUYEN == id)
+                                       .ToListAsync();
 
-        //    _itruyentranhRepository.DeleteWithId(truyentranh);
-        //    return Ok();
-        //}
+                foreach (var thuoc in thuocs)
+                {
+                    var result = await _thuocRepository.DeleteAsync(thuoc.MA_TRUYEN, thuoc.MA_THE_LOAI);
+                    if (!result)
+                    {
+                        // Xử lý nếu xóa thất bại
+                        return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting Thuoc.");
+                    }
+                }
+
+                // Lấy và xóa TRUYEN_TRANH
+                var truyentranh = await _itruyentranhRepository.GetByIdAsync(id);
+                if (truyentranh == null)
+                {
+                    return NotFound();
+                }
+
+                await _itruyentranhRepository.DeleteWithIdAsync(truyentranh); // Đảm bảo phương thức hỗ trợ async
+
+                // Commit giao dịch
+                await transaction.CommitAsync();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Rollback giao dịch trong trường hợp có lỗi
+                await transaction.RollbackAsync();
+                // Ghi log lỗi nếu cần
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Internal server error: {ex.Message}");
+            }
+        }
 
     }
 }

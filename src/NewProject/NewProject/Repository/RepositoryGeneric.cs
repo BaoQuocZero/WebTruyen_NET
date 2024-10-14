@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// Repository/RepositoryGeneric.cs
+using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace NewProject.Repository
 {
@@ -14,45 +17,33 @@ namespace NewProject.Repository
             _entities = _context.Set<T>();
         }
 
-        public async Task<T> AddNew(T entity)
+        public async Task<T> AddNewAsync(T entity)
         {
             var newEntity = await _entities.AddAsync(entity);
             await _context.SaveChangesAsync();
             return newEntity.Entity;
-
         }
 
-        public void DeleteWithId(T entity)
+        public async Task DeleteWithIdAsync(T entity)
         {
-
             _entities.Remove(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             return await _entities.ToListAsync();
         }
 
-        public async Task<T> GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            var entityId = await _entities.FindAsync(id);
-            if (entityId == null)
-            {
-                return null;
-            }
-            else
-            {
-                return entityId;
-            }
+            return await _entities.FindAsync(id);
         }
 
-        public void UpdateWithId(T entity)
+        public async Task UpdateWithIdAsync(T entity)
         {
             _entities.Update(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
-
-
     }
 }

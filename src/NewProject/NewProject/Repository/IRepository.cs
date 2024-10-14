@@ -1,11 +1,15 @@
-﻿namespace NewProject.Repository
+﻿// Repository/IRepository.cs
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace NewProject.Repository
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAll();
-        Task<T> GetById(int id);
-        Task<T> AddNew(T entity);
-        void UpdateWithId(T entity);
-        void DeleteWithId(T entity);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<T> GetByIdAsync(int id); // Thêm Async
+        Task<T> AddNewAsync(T entity); // Thêm Async
+        Task UpdateWithIdAsync(T entity); // Thêm Async
+        Task DeleteWithIdAsync(T entity); // Thêm Async
     }
 }

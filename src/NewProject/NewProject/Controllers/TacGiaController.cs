@@ -25,7 +25,7 @@ namespace NewProject.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllTacGia() 
         {
-            return Ok(await _itacgiaRepository.GetAll());
+            return Ok(await _itacgiaRepository.GetAllAsync());
         }
 
         [HttpPost]
@@ -41,7 +41,7 @@ namespace NewProject.Controllers
                     GIOI_TINH_TAC_GIA = tAC_GIA_DTOs.GIOI_TINH_TAC_GIA,
                     QUOC_GIA_TAC_GIA = tAC_GIA_DTOs.QUOC_GIA_TAC_GIA
                 };
-               await  _itacgiaRepository.AddNew(newTacgia);
+               await  _itacgiaRepository.AddNewAsync(newTacgia);
                 return Ok("tac gia moi la "+ newTacgia.TEN_TAC_GIA);
             }
             return BadRequest("tac gia nay da ton tai");
@@ -51,7 +51,7 @@ namespace NewProject.Controllers
         [HttpGet("id")]
         public async Task<IActionResult> GetByIdTacGia(int id)
         {
-            var tacgia = await _itacgiaRepository.GetById(id);
+            var tacgia = await _itacgiaRepository.GetByIdAsync(id);
             if(tacgia == null)
             {
                 return BadRequest();
@@ -66,7 +66,7 @@ namespace NewProject.Controllers
         [HttpPut("id")]
         public async Task<IActionResult> PutByIdTacGia(int id,TAC_GIA_DTOs tacgiaDTO)
         {
-            var tacgia = await _itacgiaRepository.GetById(id);
+            var tacgia = await _itacgiaRepository.GetByIdAsync(id);
             if (tacgia == null)
             {
                 return BadRequest("không tìm thấy tác giả");
@@ -86,7 +86,7 @@ namespace NewProject.Controllers
             tacgia.GIOI_TINH_TAC_GIA = tacgiaDTO.GIOI_TINH_TAC_GIA;
             tacgia.QUOC_GIA_TAC_GIA = tacgiaDTO.QUOC_GIA_TAC_GIA;
 
-            _itacgiaRepository.UpdateWithId(tacgia);
+            _itacgiaRepository.UpdateWithIdAsync(tacgia);
 
             return Ok("đã thay đổi thành công");
         }
@@ -97,24 +97,21 @@ namespace NewProject.Controllers
         [HttpDelete("id")]
         public async Task<IActionResult> DeleteByIdTacGia(int id)
         {
-            var tacgia = await _itacgiaRepository.GetById(id);
+            var tacgia = await _itacgiaRepository.GetByIdAsync(id);
             if (tacgia == null)
             {
                 return BadRequest();
             }
-
 
             var sangtacAll = await _context.SANG_TACs
                                    .Where(s => s.MA_TAC_GIA == id) // Thay đổi điều kiện theo cấu trúc của bạn
                                    .ToListAsync();
             foreach (var sangtac in sangtacAll)
             {
-                _satacRepository.DeleteWithId(sangtac);
+                _satacRepository.DeleteWithIdAsync(sangtac);
             }
 
-            
-            
-             _itacgiaRepository.DeleteWithId(tacgia);
+             _itacgiaRepository.DeleteWithIdAsync(tacgia);
             return Ok();
         }       
 

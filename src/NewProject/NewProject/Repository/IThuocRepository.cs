@@ -1,5 +1,6 @@
 // Repository/ITHUOCRepository.cs
 using NewProject.DTOs;
+using NewProject.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

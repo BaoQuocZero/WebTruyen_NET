@@ -24,12 +24,12 @@ namespace NewProject.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllTheLoai()
         {
-            return Ok(await _ITheLoaiRepository.GetAll());
+            return Ok(await _ITheLoaiRepository.GetAllAsync());
         }
         [HttpGet("id")]
         public async Task<IActionResult> GetByIdTheLoai(int id)
         {
-            var TheLoai = await _ITheLoaiRepository.GetById(id);
+            var TheLoai = await _ITheLoaiRepository.GetByIdAsync(id);
             if (TheLoai == null)
             {
                 return BadRequest();
@@ -47,7 +47,7 @@ namespace NewProject.Controllers
                     TEN_THE_LOAI = _THE_LOAI_DTOs.TEN_THE_LOAI,
                     CHO_GIOI_TINH = _THE_LOAI_DTOs.CHO_GIOI_TINH
                 };
-                _ITheLoaiRepository.AddNew(newTheLoai);
+                _ITheLoaiRepository.AddNewAsync(newTheLoai);
                 return Ok("The loai moi la " + newTheLoai);
             }
             return BadRequest("The loai nay da ton tai");
@@ -55,38 +55,38 @@ namespace NewProject.Controllers
         [HttpPut("id")]
         public async Task<IActionResult> PutByIdTheLoai(int id, THE_LOAI_DTOs tHE_LOAI_DTOs)
         {
-            var TheLoai = await _ITheLoaiRepository.GetById(id);
+            var TheLoai = await _ITheLoaiRepository.GetByIdAsync(id);
             if (TheLoai == null)
             {
                 return BadRequest("không tìm thấy tác giả");
             }
             TheLoai.TEN_THE_LOAI = tHE_LOAI_DTOs.TEN_THE_LOAI;
             TheLoai.CHO_GIOI_TINH = tHE_LOAI_DTOs.CHO_GIOI_TINH;
-            _ITheLoaiRepository.UpdateWithId(TheLoai);
+            _ITheLoaiRepository.UpdateWithIdAsync(TheLoai);
             return Ok("đã thay đổi thành công");
         }
 
-        //[HttpDelete("id")]
-        //public async Task<IActionResult> DeleteByIdTacGia(int id)
-        //{
-        //    var TheLoai = await _ITheLoaiRepository.GetById(id);
-        //    if (TheLoai == null)
-        //    {
-        //        return BadRequest();
-        //    }
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteByIdTacGia(int id)
+        {
+            var TheLoai = await _ITheLoaiRepository.GetByIdAsync(id);
+            if (TheLoai == null)
+            {
+                return BadRequest();
+            }
 
 
-        //    var thuocs = await _context.THUOCs
-        //                          .Where(s => s.MA_THE_LOAI == id) // Thay đổi điều kiện theo cấu trúc của bạn
-        //                          .ToListAsync();
-        //    foreach (var thuoc in thuocs)
-        //    {
-        //        _thuocRepository.DeleteWithId(thuoc);
-        //    }
+            var thuocs = await _context.THUOCs
+                                  .Where(s => s.MA_THE_LOAI == id) // Thay đổi điều kiện theo cấu trúc của bạn
+                                  .ToListAsync();
+            foreach (var thuoc in thuocs)
+            {
+                var result = await _thuocRepository.DeleteAsync(thuoc.MA_TRUYEN, thuoc.MA_THE_LOAI);
+            }
 
 
-        //    _ITheLoaiRepository.DeleteWithId(TheLoai);
-        //    return Ok();
-        //}
+            _ITheLoaiRepository.DeleteWithIdAsync(TheLoai);
+            return Ok();
+        }
     }
 }

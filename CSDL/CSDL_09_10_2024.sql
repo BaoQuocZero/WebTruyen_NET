@@ -4,8 +4,9 @@
 /*==============================================================*/
 
 CREATE DATABASE QUANLY_TRUYEN
+go
 USE QUANLY_TRUYEN
-
+go
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('SANG_TAC') and o.name = 'FK_SANG_TAC_SANG_TAC_TAC_GIA')
@@ -135,11 +136,11 @@ go
 /* Table: TAC_GIA                                               */
 /*==============================================================*/
 create table TAC_GIA (
-   MA_TAC_GIA           int  IDENTITY(1,1)    not null,
+   MA_TAC_GIA           int  IDENTITY(1,1) not null,
    TEN_TAC_GIA          nvarchar(255)         null,
    GIOI_TINH_TAC_GIA    nvarchar(50)          null,
    QUOC_GIA_TAC_GIA     nvarchar(255)         null,
-   constraint PK_TAC_GIA primary key nonclustered (MA_TAC_GIA)
+   constraint PK_TAC_GIA primary key (MA_TAC_GIA)
 )
 go
 
@@ -150,7 +151,7 @@ create table THE_LOAI (
    MA_THE_LOAI          int     IDENTITY(1,1) not null,
    TEN_THE_LOAI         nvarchar(255)         null,
    CHO_GIOI_TINH        nvarchar(50)          null,
-   constraint PK_THE_LOAI primary key nonclustered (MA_THE_LOAI)
+   constraint PK_THE_LOAI primary key (MA_THE_LOAI)
 )
 go
 
@@ -191,7 +192,7 @@ create table TRUYEN_TRANH (
    TINH_TRANG           nvarchar(50)          null,
    MO_TA_TRUYEN         nvarchar(4000)        null,
    GHI_CHU_TRUYEN       nvarchar(4000)        null,
-   constraint PK_TRUYEN_TRANH primary key nonclustered (MA_TRUYEN)
+   constraint PK_TRUYEN_TRANH primary key (MA_TRUYEN)
 )
 go
 
