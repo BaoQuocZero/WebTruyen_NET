@@ -169,7 +169,6 @@ const ModelUpdateComic = (props) => {
                                 value={theloai}
                                 onChange={(event) => setNewTheLoai(event.target.value)}
                             >
-                                <option></option>
                                 {listGenres.map((item, index) => (
                                     <option value={item.mA_THE_LOAI}>
                                         {item.teN_THE_LOAI}
@@ -186,12 +185,14 @@ const ModelUpdateComic = (props) => {
                             >
                                 <option></option>
                                 {listAuthor.map((item, index) => (
-                                    <option value={item.mA_TAC_GIA}>
+                                    <option key={index} value={item.mA_TAC_GIA}>
                                         {item.teN_TAC_GIA}
                                     </option>
                                 ))}
                             </select>
                         </div>
+
+
                     </form>
                 </Modal.Body>
                 <Modal.Footer>

@@ -86,7 +86,7 @@ namespace NewProject.Controllers
             tacgia.GIOI_TINH_TAC_GIA = tacgiaDTO.GIOI_TINH_TAC_GIA;
             tacgia.QUOC_GIA_TAC_GIA = tacgiaDTO.QUOC_GIA_TAC_GIA;
 
-            _itacgiaRepository.UpdateWithIdAsync(tacgia);
+            await _itacgiaRepository.UpdateWithIdAsync(tacgia);
 
             return Ok("đã thay đổi thành công");
         }
@@ -94,7 +94,7 @@ namespace NewProject.Controllers
 
 
 
-        [HttpDelete("id")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteByIdTacGia(int id)
         {
             var tacgia = await _itacgiaRepository.GetByIdAsync(id);
@@ -106,12 +106,17 @@ namespace NewProject.Controllers
             var sangtacAll = await _context.SANG_TACs
                                    .Where(s => s.MA_TAC_GIA == id) // Thay đổi điều kiện theo cấu trúc của bạn
                                    .ToListAsync();
-            foreach (var sangtac in sangtacAll)
+
+            if (sangtacAll != null)
             {
-                _satacRepository.DeleteWithIdAsync(sangtac);
+                foreach (var sangtac in sangtacAll)
+                 {
+                   _satacRepository.DeleteWithIdAsync(sangtac);
+                 }
             }
 
-             _itacgiaRepository.DeleteWithIdAsync(tacgia);
+            await _itacgiaRepository.DeleteWithIdAsync(tacgia);
+
             return Ok();
         }       
 

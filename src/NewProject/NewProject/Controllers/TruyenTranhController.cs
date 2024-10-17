@@ -19,7 +19,8 @@ namespace NewProject.Controllers
         private readonly ITruyentranhRepository _itruyentranhRepository;
         private readonly ISangtacRepository _sangtacRepository;
         private readonly IThuocRepository _thuocRepository;
-        public TruyenTranhController(MyDbContext context, ITruyentranhRepository itruyentranhRepository, ISangtacRepository sangtacRepository, IThuocRepository thuocRepository)
+        
+        public TruyenTranhController(MyDbContext context, ITruyentranhRepository itruyentranhRepository, ISangtacRepository sangtacRepository, IThuocRepository thuocRepository )
         {
             _context = context;
             _itruyentranhRepository = itruyentranhRepository;
@@ -48,7 +49,7 @@ namespace NewProject.Controllers
                         THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.TEN_THE_LOAI),
                         MA_THE_LOAI = p.THUOCs.Select(s => s.THE_LOAI.MA_THE_LOAI),
                         CHO_GIOI_TINH = p.THUOCs.Select(s => s.THE_LOAI.CHO_GIOI_TINH),
-                        TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.TEN_TAC_GIA),
+                        TEN_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.TEN_TAC_GIA),
                         MA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.MA_TAC_GIA),
                         QUOC_GIA_TAC_GIA = p.SANG_TACs.Select(s => s.TAC_GIA.QUOC_GIA_TAC_GIA)
                     });
@@ -190,6 +191,16 @@ namespace NewProject.Controllers
                 await _context.SaveChangesAsync();
 
                 // Tạo một thực thể mới với MA_TAC_GIA mới
+                var newSangTac = new SANG_TAC
+                {
+                    MA_TRUYEN = id,
+                    MA_TAC_GIA = truyentranhDTOs.MA_TAC_GIA
+                    // Cần gán các thuộc tính khác nếu có
+                };
+                await _context.SANG_TACs.AddAsync(newSangTac);
+            }
+            else
+            {
                 var newSangTac = new SANG_TAC
                 {
                     MA_TRUYEN = id,

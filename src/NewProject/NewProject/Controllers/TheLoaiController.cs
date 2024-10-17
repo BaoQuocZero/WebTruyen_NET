@@ -62,12 +62,12 @@ namespace NewProject.Controllers
             }
             TheLoai.TEN_THE_LOAI = tHE_LOAI_DTOs.TEN_THE_LOAI;
             TheLoai.CHO_GIOI_TINH = tHE_LOAI_DTOs.CHO_GIOI_TINH;
-            _ITheLoaiRepository.UpdateWithIdAsync(TheLoai);
+            await _ITheLoaiRepository.UpdateWithIdAsync(TheLoai);
             return Ok("đã thay đổi thành công");
         }
 
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteByIdTacGia(int id)
+        public async Task<IActionResult> DeleteByIdTheLoai(int id)
         {
             var TheLoai = await _ITheLoaiRepository.GetByIdAsync(id);
             if (TheLoai == null)

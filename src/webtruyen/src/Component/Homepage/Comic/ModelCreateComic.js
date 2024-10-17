@@ -51,7 +51,7 @@ const ModelCreateComic = (props) => {
 
     const handleSubmitCreateComic = async () => {
         let data = await postNewComis(tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia)
-        console.log("Component res = ", data);
+        console.log("Component res = ", data.AxiosError[0].code);
         handleClose();
         await fetchListComic();
     };
@@ -129,7 +129,7 @@ const ModelCreateComic = (props) => {
                                 value={theloai}
                                 onChange={(event) => setTheLoai(event.target.value)}
                             >
-                                <option></option>
+
                                 {listGenres.map((item, index) => (
                                     <option value={item.mA_THE_LOAI}>
                                         {item.teN_THE_LOAI}
@@ -144,7 +144,7 @@ const ModelCreateComic = (props) => {
                                 value={tentacgia}
                                 onChange={(event) => setTenTacGia(event.target.value)}
                             >
-                                <option></option>
+                                {/* <option></option> */}
                                 {listAuthor.map((item, index) => (
                                     <option value={item.mA_TAC_GIA}>
                                         {item.teN_TAC_GIA}

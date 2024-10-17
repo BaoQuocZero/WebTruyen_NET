@@ -31,6 +31,7 @@ const Comic = () => {
     };
 
     const handleClickUpdate = (item) => {
+        console.log("item=", item)
         setTruyenTranh({
             mA_TRUYEN: item.mA_TRUYEN,
             teN_TRUYEN: item.teN_TRUYEN,
@@ -73,7 +74,7 @@ const Comic = () => {
                 <table className="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            {/* <td scope="col">Mã truyện</td> */}
+                            <td scope="col">Mã truyện</td>
                             <td scope="col">Tên truyện</td>
                             {/* <td scope="col">Ảnh bìa</td> */}
                             <td scope="col">Mô tả</td>
@@ -95,7 +96,7 @@ const Comic = () => {
                             listComic.map((item, index) => {
                                 return (
                                     <tr key={`table-user-${index}`}>
-                                        {/* <td>{item.mA_TRUYEN}</td> */}
+                                        <td>{item.mA_TRUYEN}</td>
                                         <td>{item.teN_TRUYEN}</td>
                                         {/* <td>{item.anH_BIA}</td> */}
                                         <td>{item.mO_TA_TRUYEN}</td>
@@ -106,7 +107,7 @@ const Comic = () => {
                                         <td>{item.tinH_TRANG}</td>
                                         <td>{Array.isArray(item.thE_LOAI) ? item.thE_LOAI.join(', ') : item.thE_LOAI}</td>
                                         <td>{Array.isArray(item.chO_GIOI_TINH) ? item.chO_GIOI_TINH.join(', ') : item.chO_GIOI_TINH}</td>
-                                        <td>{Array.isArray(item.taC_GIA) ? item.taC_GIA.join(', ') : item.taC_GIA}</td>
+                                        <td>{Array.isArray(item.teN_TAC_GIA) ? item.teN_TAC_GIA.join(', ') : item.teN_TAC_GIA}</td>
                                         <td>{Array.isArray(item.quoC_GIA_TAC_GIA) ? item.quoC_GIA_TAC_GIA.join(', ') : item.quoC_GIA_TAC_GIA}</td>
                                         <td>
                                             <button
@@ -118,12 +119,7 @@ const Comic = () => {
                                             >
                                                 Update
                                             </button>
-                                            <ModelUpdateComic
-                                                showUpdate={showModalUpdateAuthor}
-                                                setShowUpdate={setShowModalUpdateAuthor}
-                                                selectedComicId={truyentranh} // Truyền ID vào modal
-                                                fetchListComic={fetchListComic}
-                                            />
+
                                             <button className="btn_delete btn btn-danger mx-2 my-1"
                                                 onClick={() => { handleDeleteComic(item.mA_TRUYEN) }}
                                             >
@@ -140,6 +136,12 @@ const Comic = () => {
                                 </td>
                             </tr>
                         )}
+                        <ModelUpdateComic
+                            showUpdate={showModalUpdateAuthor}
+                            setShowUpdate={setShowModalUpdateAuthor}
+                            selectedComicId={truyentranh} // Truyền ID vào modal
+                            fetchListComic={fetchListComic}
+                        />
                     </tbody>
                 </table>
             </div>
