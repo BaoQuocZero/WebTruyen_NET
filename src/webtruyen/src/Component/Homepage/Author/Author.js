@@ -124,7 +124,6 @@ const Author = (props) => {
                 </tr>
               )}
             </tbody>
-            {/* ModelCreateAuthor */}
             <ModelCreateAuthor
               show={showModalCreateAuthor}
               setShow={setShowModalCreateAuthor}

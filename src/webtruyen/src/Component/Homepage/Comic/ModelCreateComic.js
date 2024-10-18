@@ -50,8 +50,8 @@ const ModelCreateComic = (props) => {
     const [tentacgia, setTenTacGia] = useState("");
 
     const handleSubmitCreateComic = async () => {
-        let data = await postNewComis(tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia)
-        console.log("Component res = ", data.AxiosError[0].code);
+        let data = await postNewComis(tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia);
+        console.log("truyen=", data);
         handleClose();
         await fetchListComic();
     };
@@ -152,23 +152,6 @@ const ModelCreateComic = (props) => {
                                 ))}
                             </select>
                         </div>
-                        {/* <div className="col-md-6">
-                            <label className="form-label">CHO GIỚI TÍNH</label>
-                            <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
-                                <option value="Nam">NAM</option>
-                                <option value="Nữ">NỮ</option>
-                                <option value="Tất cả">TẤT CẢ</option>
-                            </select>
-                        </div> */}
-                        {/* <div className="col-md-12">
-                            <label className="form-label">QUỐC GIA</label>
-                            <input
-                                type="text"
-                                className="form-control"
-                                value={quocgia}
-                                onChange={(event) => setQuocGia(event.target.value)}
-                            />
-                        </div> */}
                     </form>
                 </Modal.Body>
                 <Modal.Footer>

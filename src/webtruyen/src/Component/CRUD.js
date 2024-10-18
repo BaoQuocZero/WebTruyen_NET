@@ -34,7 +34,6 @@ const deleteAuthorById = async (id) => {
     // Đảm bảo ID đúng kiểu và URL chính xác
     const response = await axios.delete(`https://localhost:7003/api/TacGia/delete/${id}`);
     return response.data;
-    return 1;
   } catch (error) {
     console.error("Error updating author:", error);
     throw error;
@@ -53,43 +52,25 @@ const getAllComicByAuthor = (MA_TAC_GIA) => {
   return axios.get(`https://localhost:7003/api/TruyenTranh/tacgia/${MA_TAC_GIA}`);
 };
 
-const postNewComis = async (tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia) => {
-
-  try {
-    let data = await axios.post("https://localhost:7003/api/TruyenTranh", {
-      teN_TRUYEN: tentruyen,
-      anH_BIA: anhbia,
-      noI_DUNG_TRUYEN: noidung,
-      tinH_TRANG: tinhtrang,
-      mO_TA_TRUYEN: mota,
-      ghI_CHU_TRUYEN: ghichu,
-      mA_THE_LOAI: theloai,
-      mA_TAC_GIA: tentacgia
-    });
-    return (data)
-  } catch (e) {
-    return (e);
-  }
+const postNewComis = (tentruyen, anhbia, noidung, tinhtrang, mota, ghichu, theloai, tentacgia) => {
+  return axios.post("https://localhost:7003/api/TruyenTranh", {
+    teN_TRUYEN: tentruyen,
+    anH_BIA: anhbia,
+    noI_DUNG_TRUYEN: noidung,
+    tinH_TRANG: tinhtrang,
+    mO_TA_TRUYEN: mota,
+    ghI_CHU_TRUYEN: ghichu,
+    mA_THE_LOAI: theloai,
+    mA_TAC_GIA: tentacgia
+  });
 };
 
 const updateComicById = async (id, updatedComic) => {
   try {
     // Đảm bảo ID đúng kiểu và URL chính xác
-    console.log("update=", updatedComic);
-
-    // const response = await axios.put(`https://localhost:7003/api/TruyenTranh/id?id=${id}`, updatedComic);
-    // teN_TRUYEN: tentruyen,
-    // anH_BIA: anhbia,
-    // noI_DUNG_TRUYEN: noidung,
-    // tinH_TRANG: tinhtrang,
-    // mO_TA_TRUYEN: mota,
-    // ghI_CHU_TRUYEN: ghichu,
-    // olD_MA_THE_LOAI: id_MATL,
-    // olD_MA_TAC_GIA: id_MATG,
-    // mA_THE_LOAI: theloai,
-    // mA_TAC_GIA: tentacgia
-
-    return 1;
+    console.log("id", updatedComic);
+    const response = await axios.put(`https://localhost:7003/api/TruyenTranh/id?id=${id}`, updatedComic);
+    return response.data;
   } catch (error) {
     console.error("Error updating author:", error);
     throw error;
@@ -106,7 +87,6 @@ const deleteComicById = async (id) => {
     throw error;
   }
 };
-
 
 
 //---------------Thể loại--------------------
@@ -135,7 +115,6 @@ const updateGenreById = async (id, updatedGenre) => {
 
 const deleteGenresById = async (id) => {
   try {
-    // Đảm bảo ID đúng kiểu và URL chính xác
     const response = await axios.delete(`https://localhost:7003/api/TheLoai/delete/${id}`);
     return response.data;
   } catch (error) {

@@ -43,7 +43,7 @@ const ModelUpdateAuthor = (props) => {
             }
 
             let data = await updateAuthorById(selectedAuthorId.mA_TAC_GIA, updatedAuthor);
-            // console.log("Update response:", data);
+            console.log("author=", data);
             handleClose();
             fetchListAuthor();
 
@@ -52,10 +52,8 @@ const ModelUpdateAuthor = (props) => {
             console.error("Update error:", error);
         }
     };
-    // console.log("check", selectedAuthorId);
-    // showValueUpdate();  
+    console.log("check", selectedAuthorId);
     return (
-
         <>
             <Modal
                 show={showUpdate}

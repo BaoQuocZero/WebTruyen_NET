@@ -9,7 +9,7 @@ const ModelCreateGenres = (props) => {
 
     const { showGenre, setShowGenre, fetchListGenre } = props;
 
-    const handleCloseGenre = () => {
+    const handleClose = () => {
         setShowGenre(false);
         setTheLoai("");
         setGioiTinh("Nam");
@@ -20,12 +20,9 @@ const ModelCreateGenres = (props) => {
 
 
     const handleCreateNewGenres = async () => {
-
         let data = await postNewGenres(tentheloai, gioitinh)
-        //console.log("check res", res.data)
         console.log("Component res = ", data)
-        toast.success("Thêm thành công");
-        handleCloseGenre();
+        handleClose();
         fetchListGenre();
     };
 
@@ -33,7 +30,7 @@ const ModelCreateGenres = (props) => {
         <>
             <Modal
                 show={showGenre}
-                onHide={handleCloseGenre}
+                onHide={handleClose}
                 size="xl"
                 backdrop="static"
                 className='model-add-user'
@@ -61,7 +58,7 @@ const ModelCreateGenres = (props) => {
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseGenre}>
+                    <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
                     <Button variant="primary" onClick={() => handleCreateNewGenres()}>

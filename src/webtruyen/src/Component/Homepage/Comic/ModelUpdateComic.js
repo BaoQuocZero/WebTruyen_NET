@@ -73,6 +73,8 @@ const ModelUpdateComic = (props) => {
                 ghI_CHU_TRUYEN: ghichu,
                 olD_MA_THE_LOAI: selectedComicId.mA_THE_LOAI[0],
                 olD_MA_TAC_GIA: selectedComicId.mA_TAC_GIA[0],
+                // mA_THE_LOAI: parseInt(theloai[0]),
+                // mA_TAC_GIA: parseInt(tentacgia[0]),
                 mA_THE_LOAI: parseInt(theloai[0]),
                 mA_TAC_GIA: parseInt(tentacgia[0]),
             };
@@ -183,7 +185,6 @@ const ModelUpdateComic = (props) => {
                                 value={tentacgia}
                                 onChange={(event) => setNewTacGia(event.target.value)}
                             >
-                                <option></option>
                                 {listAuthor.map((item, index) => (
                                     <option key={index} value={item.mA_TAC_GIA}>
                                         {item.teN_TAC_GIA}
@@ -191,8 +192,6 @@ const ModelUpdateComic = (props) => {
                                 ))}
                             </select>
                         </div>
-
-
                     </form>
                 </Modal.Body>
                 <Modal.Footer>

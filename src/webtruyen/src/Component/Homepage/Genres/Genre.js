@@ -10,14 +10,7 @@ const Genre = (props) => {
     const [showModalCreateGenres, setShowModalCreateGenres] = useState(false);
     const [showModalUpdateGenres, setShowModalUpdateGenres] = useState(false);
 
-    const [TheLoai, setTheLoai] = useState(
-        {
-            mA_THE_LOAI: '',
-            teN_THE_LOAI: '',
-            chO_GIOI_TINH: '',
-            thuoCs: '',
-        }
-    );
+    const [TheLoai, setTheLoai] = useState(['']);
 
     const handleClickUpdate = (item) => {
         setTheLoai({
@@ -26,13 +19,13 @@ const Genre = (props) => {
             chO_GIOI_TINH: item.chO_GIOI_TINH,
             thuoCs: item.thuoCs,
         });
+        setShowModalUpdateGenres(true); // Hiển thị Modal Update
     };
 
     const handleDeleteGenres = async (id) => {
         if (window.confirm("Are you sure you want to delete this genres?")) {
             console.log("id=", id)
             await deleteGenresById(id);
-            // Cập nhật lại danh sách sau khi xóa
             await fetchListGenre();
         }
     };
@@ -100,7 +93,11 @@ const Genre = (props) => {
                                                     selectedGenreId={TheLoai}
                                                     fetchListGenre={fetchListGenre}
                                                 />
-                                                <button className="btn_delete btn btn-danger" onClick={() => { handleDeleteGenres(item.mA_THE_LOAI) }}>Delete</button>
+                                                <button className="btn_delete btn btn-danger"
+                                                    onClick={() => { handleDeleteGenres(item.mA_THE_LOAI) }}
+                                                >
+                                                    Delete
+                                                </button>
                                             </td>
                                         </tr>
                                     );
