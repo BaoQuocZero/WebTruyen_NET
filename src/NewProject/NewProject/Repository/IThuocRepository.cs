@@ -1,12 +1,13 @@
 // Repository/ITHUOCRepository.cs
 using NewProject.DTOs;
 using NewProject.Models;
+using NewProject.Repository;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NewProject.Repositories
 {
-    public interface IThuocRepository
+    public interface IThuocRepository 
     {
         Task<IEnumerable<ThuocReadDTO>> GetAllAsync();
         Task<ThuocReadDTO> GetByIdAsync(int maTruyen, int maTheLoai);

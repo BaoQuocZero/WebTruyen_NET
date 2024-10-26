@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NewProject.Data;
 using NewProject.DTOs;
 using NewProject.Models;
+using NewProject.Repository;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

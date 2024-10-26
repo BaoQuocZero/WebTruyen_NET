@@ -81,7 +81,8 @@ namespace NewProject.Controllers
                                   .ToListAsync();
             foreach (var thuoc in thuocs)
             {
-                var result = await _thuocRepository.DeleteAsync(thuoc.MA_TRUYEN, thuoc.MA_THE_LOAI);
+                var result =  _context.THUOCs.Remove(thuoc);
+                _context.SaveChanges();
             }
 
 
