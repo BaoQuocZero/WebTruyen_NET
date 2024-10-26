@@ -18,13 +18,13 @@ const ModelCreateComic = (props) => {
 
     const fetchListAuthor = async () => {
         let res = await getAllAuthor();
-        console.log("res=", res.data);
+        console.log("tacgia=", res.data);
         setListAuthor(res.data);
     };
 
     const fetchListGenre = async () => {
         let res = await getAllGenres();
-        console.log("res=", res.data);
+        console.log("theloai=", res.data);
         setListGenres(res.data);
     };
 
@@ -34,9 +34,9 @@ const ModelCreateComic = (props) => {
         setAnhBia("");
         setNoiDung("");
         setTinhTrang("");
-        setTheLoai("");
         setMota("");
         setGhichu("");
+        setTheLoai("");
         setTenTacGia("");
     };
 
@@ -44,9 +44,9 @@ const ModelCreateComic = (props) => {
     const [anhbia, setAnhBia] = useState("");
     const [noidung, setNoiDung] = useState("");
     const [tinhtrang, setTinhTrang] = useState("");
-    const [theloai, setTheLoai] = useState("");
     const [mota, setMota] = useState("");
     const [ghichu, setGhichu] = useState("");
+    const [theloai, setTheLoai] = useState("");
     const [tentacgia, setTenTacGia] = useState("");
 
     const handleSubmitCreateComic = async () => {
@@ -129,9 +129,8 @@ const ModelCreateComic = (props) => {
                                 value={theloai}
                                 onChange={(event) => setTheLoai(event.target.value)}
                             >
-
-                                {listGenres.map((item, index) => (
-                                    <option value={item.mA_THE_LOAI}>
+                                {listGenres.map((item) => (
+                                    <option key={item.mA_THE_LOAI}>
                                         {item.teN_THE_LOAI}
                                     </option>
                                 ))}
@@ -144,14 +143,14 @@ const ModelCreateComic = (props) => {
                                 value={tentacgia}
                                 onChange={(event) => setTenTacGia(event.target.value)}
                             >
-                                {/* <option></option> */}
-                                {listAuthor.map((item, index) => (
-                                    <option value={item.mA_TAC_GIA}>
+                                {listAuthor.map((item) => (
+                                    <option key={item.mA_TAC_GIA}>
                                         {item.teN_TAC_GIA}
                                     </option>
                                 ))}
                             </select>
                         </div>
+
                     </form>
                 </Modal.Body>
                 <Modal.Footer>

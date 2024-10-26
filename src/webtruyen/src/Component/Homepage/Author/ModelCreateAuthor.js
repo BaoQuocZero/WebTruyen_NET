@@ -51,7 +51,8 @@ const ModelCreateAuthor = (props) => {
                         </div>
                         <div className="col-md-4">
                             <label className="form-label">GIỚI TÍNH</label>
-                            <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
+                            <select className="form-select"
+                                onChange={(event) => setGioiTinh(event.target.value)}>
                                 <option value="Nam">NAM</option>
                                 <option value="Nữ">NỮ</option>
                                 <option value="Khác">KHÁC</option>

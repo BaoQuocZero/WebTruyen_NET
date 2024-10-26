@@ -12,18 +12,18 @@ const ModelCreateGenres = (props) => {
     const handleClose = () => {
         setShowGenre(false);
         setTheLoai("");
-        setGioiTinh("Nam");
+        setChoGioiTinh("Nam");
     };
 
     const [tentheloai, setTheLoai] = useState("");
-    const [gioitinh, setGioiTinh] = useState("Nam");
+    const [gioitinh, setChoGioiTinh] = useState("Nam");
 
 
     const handleCreateNewGenres = async () => {
         let data = await postNewGenres(tentheloai, gioitinh)
         console.log("Component res = ", data)
         handleClose();
-        fetchListGenre();
+        await fetchListGenre();
     };
 
     return (
@@ -49,7 +49,8 @@ const ModelCreateGenres = (props) => {
                         </div>
                         <div className="col-md-4">
                             <label className="form-label">CHO GIỚI TÍNH</label>
-                            <select className="form-select" onChange={(event) => setGioiTinh(event.target.value)}>
+                            <select className="form-select"
+                                onChange={(event) => setChoGioiTinh(event.target.value)}>
                                 <option value="Nam">NAM</option>
                                 <option value="Nữ">NỮ</option>
                                 <option value="Tất cả">TẤT CẢ</option>
