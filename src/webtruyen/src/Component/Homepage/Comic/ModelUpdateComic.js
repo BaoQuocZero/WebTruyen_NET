@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
-import { getAllAuthor, getAllGenres, updateComicById } from "../../CRUD";
+import { getAllAuthor, getAllGenres, getAllComic, updateComicById } from "../../CRUD";
 
 const ModelUpdateComic = (props) => {
   const { showUpdate, setShowUpdate, selectedComicId, fetchListComic } = props; // Nhận thêm prop `authorId`
@@ -26,6 +26,7 @@ const ModelUpdateComic = (props) => {
     setNewGhiChu("");
     setNewTheLoai("");
     setNewTacGia("");
+    fetchListComic();
   };
 
   const [listAuthor, setListAuthor] = useState([]);
@@ -92,9 +93,30 @@ const ModelUpdateComic = (props) => {
       // Show a success message
       toast.success("Update successful!");
       console.log("Updating comic...");
+      setShowUpdate(false);
+      setNewTenTruyen("");
+      setNewAnhBia("");
+      setNewNoiDung("");
+      setNewTinhTrang("");
+      setNewMoTa("");
+      setNewGhiChu("");
+      setNewTheLoai("");
+      setNewTacGia("");
+
+      fetchListComic();
       // Reload the page
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
+      setShowUpdate(false);
+      setNewTenTruyen("");
+      setNewAnhBia("");
+      setNewNoiDung("");
+      setNewTinhTrang("");
+      setNewMoTa("");
+      setNewGhiChu("");
+      setNewTheLoai("");
+      setNewTacGia("");
+      fetchListComic();
       toast.error("Update failed! Check the console for more details.");
       console.error("Update error:", error);
     }
