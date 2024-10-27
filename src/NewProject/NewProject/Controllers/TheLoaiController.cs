@@ -86,7 +86,7 @@ namespace NewProject.Controllers
             }
 
 
-            _ITheLoaiRepository.DeleteWithIdAsync(TheLoai);
+            await _ITheLoaiRepository.DeleteWithIdAsync(TheLoai);
             return Ok();
         }
     }

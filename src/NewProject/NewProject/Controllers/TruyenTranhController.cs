@@ -171,36 +171,39 @@ namespace NewProject.Controllers
         public async Task<IActionResult> PutByIdTruyenTranh(int id, TRUYEN_TRANH_DTOs truyentranhDTOs)
         {
             var truyentranh = await _context.TRUYEN_TRANHs.FirstOrDefaultAsync(p => p.MA_TRUYEN == id);
-            //cách 1
-            //_context.Entry(tacgia).CurrentValues.SetValues(tacgiaDTO);
-            //_context.Entry(tacgia).State = EntityState.Modified;
-            //_context.SaveChanges();
-            //cách 2
 
+            // Cập nhật các thuộc tính của TRUYEN_TRANH
             truyentranh.TEN_TRUYEN = truyentranhDTOs.TEN_TRUYEN;
             truyentranh.ANH_BIA = truyentranhDTOs.ANH_BIA;
             truyentranh.NOI_DUNG_TRUYEN = truyentranhDTOs.NOI_DUNG_TRUYEN;
             truyentranh.TINH_TRANG = truyentranhDTOs.TINH_TRANG;
             truyentranh.MO_TA_TRUYEN = truyentranhDTOs.MO_TA_TRUYEN;
             truyentranh.GHI_CHU_TRUYEN = truyentranhDTOs.GHI_CHU_TRUYEN;
-            var sangtac = await _context.SANG_TACs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id && x.MA_TAC_GIA == truyentranhDTOs.OLD_MA_TAC_GIA);
-            if (sangtac != null && sangtac.MA_TAC_GIA != truyentranhDTOs.MA_TAC_GIA)
-            {
-                // Xóa thực thể hiện tại
-                _context.SANG_TACs.Remove(sangtac);
-                await _context.SaveChangesAsync();
 
-                // Tạo một thực thể mới với MA_TAC_GIA mới
-                var newSangTac = new SANG_TAC
+            // Kiểm tra SANG_TAC
+            var sangtac = await _context.SANG_TACs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id && x.MA_TAC_GIA == truyentranhDTOs.OLD_MA_TAC_GIA);
+
+            if (sangtac != null)
+            {
+                if (sangtac.MA_TAC_GIA != truyentranhDTOs.MA_TAC_GIA)
                 {
-                    MA_TRUYEN = id,
-                    MA_TAC_GIA = truyentranhDTOs.MA_TAC_GIA
-                    // Cần gán các thuộc tính khác nếu có
-                };
-                await _context.SANG_TACs.AddAsync(newSangTac);
+                    // Nếu MA_TAC_GIA cũ khác MA_TAC_GIA mới, xóa và thêm mới
+                    _context.SANG_TACs.Remove(sangtac);
+                    await _context.SaveChangesAsync();
+
+                    var newSangTac = new SANG_TAC
+                    {
+                        MA_TRUYEN = id,
+                        MA_TAC_GIA = truyentranhDTOs.MA_TAC_GIA
+                        // Cần gán các thuộc tính khác nếu có
+                    };
+                    await _context.SANG_TACs.AddAsync(newSangTac);
+                }
+                // Nếu MA_TAC_GIA cũ giống MA_TAC_GIA mới thì không làm gì
             }
             else
             {
+                // Nếu không có SANG_TAC cũ, thêm mới
                 var newSangTac = new SANG_TAC
                 {
                     MA_TRUYEN = id,
@@ -210,13 +213,30 @@ namespace NewProject.Controllers
                 await _context.SANG_TACs.AddAsync(newSangTac);
             }
 
+            // Kiểm tra THUOC
             var thuoc = await _context.THUOCs.FirstOrDefaultAsync(x => x.MA_TRUYEN == id && x.MA_THE_LOAI == truyentranhDTOs.OLD_MA_THE_LOAI);
-            if (thuoc != null && thuoc.MA_THE_LOAI != truyentranhDTOs.MA_THE_LOAI)
-            {
-                _context.THUOCs.Remove(thuoc);
-                await _context.SaveChangesAsync();
 
-                // Tạo một thực thể mới với MA_TAC_GIA mới
+            if (thuoc != null)
+            {
+                if (thuoc.MA_THE_LOAI != truyentranhDTOs.MA_THE_LOAI)
+                {
+                    // Nếu MA_THE_LOAI cũ khác MA_THE_LOAI mới, xóa và thêm mới
+                    _context.THUOCs.Remove(thuoc);
+                    await _context.SaveChangesAsync();
+
+                    var newThuoc = new THUOC
+                    {
+                        MA_TRUYEN = id,
+                        MA_THE_LOAI = truyentranhDTOs.MA_THE_LOAI
+                        // Cần gán các thuộc tính khác nếu có
+                    };
+                    await _context.THUOCs.AddAsync(newThuoc);
+                }
+                // Nếu MA_THE_LOAI cũ giống MA_THE_LOAI mới thì không làm gì
+            }
+            else
+            {
+                // Nếu không có THUOC cũ, thêm mới
                 var newThuoc = new THUOC
                 {
                     MA_TRUYEN = id,
@@ -226,12 +246,14 @@ namespace NewProject.Controllers
                 await _context.THUOCs.AddAsync(newThuoc);
             }
 
-
-
+            // Cập nhật thực thể TRUYEN_TRANH
             _itruyentranhRepository.UpdateWithIdAsync(truyentranh);
-          
-            return Ok("đã thay đổi thành công");
+
+            await _context.SaveChangesAsync(); // Lưu tất cả thay đổi vào cơ sở dữ liệu
+
+            return Ok("Đã thay đổi thành công");
         }
+
 
 
         [HttpDelete("delete/{id}")]
